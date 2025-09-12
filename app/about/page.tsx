@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Award, Users, Briefcase, Heart, Sparkles } from 'lucide-react'
+import { ArrowRight, Award, Users, Briefcase, Heart, Sparkles, MapPin } from 'lucide-react'
 import WhimsicalElements from '@/components/WhimsicalElements'
 import { getTeamMembers } from '@/lib/cosmic'
 
 export const metadata: Metadata = {
-  title: 'About Our Magic | West Michigan HR Consulting',
-  description: 'Learn about our whimsical approach to HR consulting and meet the magical team helping West Michigan businesses succeed.',
+  title: 'About Our Story | West Michigan HR Consulting',
+  description: 'Learn about our journey helping West Michigan businesses build exceptional workplaces. From Grand Rapids to Kalamazoo, we\'re your local HR partner.',
 }
 
 export default async function AboutPage() {
@@ -21,16 +21,16 @@ export default async function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <div className="text-handwriting text-6xl text-accent-600 mb-6">
-              About our little
+              About our West Michigan
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-secondary-900 mb-8 font-whimsy">
-              Magic Kingdom
+              HR Story
             </h1>
             <p className="text-xl text-secondary-700 max-w-4xl mx-auto font-whimsy leading-relaxed">
-              We're not your typical stuffy HR consultants. We believe work should be joyful, 
-              compliant, and sprinkled with just the right amount of magic! ✨ 
-              Based right here in beautiful West Michigan, we're passionate about helping 
-              local businesses create workplaces where people actually want to be.
+              We're not your typical corporate HR firm. Born and raised in West Michigan, 
+              we understand the unique spirit of our region - from the entrepreneurial energy 
+              of Grand Rapids to the manufacturing heritage of Kalamazoo. We believe work should 
+              be fulfilling, compliant, and authentically Midwestern! ✨ 
             </p>
           </div>
         </div>
@@ -41,33 +41,33 @@ export default async function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="card-whimsy p-12 text-center max-w-5xl mx-auto relative overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-6 left-6 text-4xl opacity-20 floating-element">💜</div>
-            <div className="absolute bottom-6 right-6 text-3xl opacity-30 floating-element animation-delay-400">✨</div>
+            <div className="absolute top-6 left-6 text-4xl opacity-20 floating-element">🏔️</div>
+            <div className="absolute bottom-6 right-6 text-3xl opacity-30 floating-element animation-delay-400">⭐</div>
             
-            <div className="text-handwriting text-4xl text-accent-600 mb-6">Our mission is simple</div>
+            <div className="text-handwriting text-4xl text-accent-600 mb-6">Our mission is clear</div>
             <h2 className="text-4xl font-bold text-secondary-900 mb-8 font-whimsy">
-              Spread Workplace Magic Throughout West Michigan
+              Strengthen West Michigan's Workforce, One Business at a Time
             </h2>
             <p className="text-lg text-secondary-700 leading-relaxed font-whimsy max-w-3xl mx-auto">
-              Every business - from the tiniest startup to the most established company - deserves 
-              access to HR expertise that actually makes sense. We're here to transform your people 
-              challenges into your greatest strengths, all while keeping things fun, compliant, 
-              and authentically YOU. Because let's be honest - work is too big a part of life 
-              to not enjoy it! 🌟
+              Every business in our beautiful region - from Holland's growing tech scene to 
+              Battle Creek's established industries - deserves world-class HR support. We're 
+              here to bring Fortune 500-level expertise to hometown businesses, helping you 
+              build workplaces where people thrive and communities prosper. Because when 
+              West Michigan businesses succeed, we all win! 🌟
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Whimsical Stats */}
+      {/* Why Choose Us - Local Focus */}
       <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-handwriting text-5xl text-accent-600 mb-4">
-              Why we're absolutely magical
+              Why we're West Michigan's choice
             </div>
             <h2 className="text-4xl font-bold text-secondary-900 font-whimsy">
-              Our Special Powers
+              Our Local Advantage
             </h2>
           </div>
           
@@ -75,15 +75,15 @@ export default async function AboutPage() {
             <div className="text-center group">
               <div className="card-whimsy p-8 hover:scale-105 transition-transform duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-accent-400 to-accent-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
-                  <Award className="w-12 h-12 text-white" />
+                  <MapPin className="w-12 h-12 text-white" />
                 </div>
-                <div className="text-handwriting text-3xl text-accent-600 mb-2">15+ Years</div>
+                <div className="text-handwriting text-3xl text-accent-600 mb-2">Born Here</div>
                 <h3 className="text-xl font-bold text-secondary-900 mb-4 font-whimsy">
-                  of HR Magic Experience
+                  Authentic West Michigan Roots
                 </h3>
                 <p className="text-secondary-700 font-whimsy">
-                  From Fortune 500 corporate worlds to cozy local businesses - 
-                  we've seen it all and loved every minute! 💼
+                  Lifelong residents who understand everything from lake-effect snow days 
+                  to the unique culture of West Michigan manufacturing and innovation! 🏔️
                 </p>
               </div>
             </div>
@@ -91,15 +91,15 @@ export default async function AboutPage() {
             <div className="text-center group animation-delay-200">
               <div className="card-whimsy p-8 hover:scale-105 transition-transform duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-warm-400 to-warm-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
-                  <Users className="w-12 h-12 text-white" />
+                  <Award className="w-12 h-12 text-white" />
                 </div>
-                <div className="text-handwriting text-3xl text-accent-600 mb-2">100% Local</div>
+                <div className="text-handwriting text-3xl text-accent-600 mb-2">15+ Years</div>
                 <h3 className="text-xl font-bold text-secondary-900 mb-4 font-whimsy">
-                  West Michigan Love
+                  of Regional HR Excellence
                 </h3>
                 <p className="text-secondary-700 font-whimsy">
-                  Born, raised, and deeply rooted in our beautiful region. 
-                  We get the lake effect - and the business effect too! 🏔️
+                  From startup incubators in Grand Rapids to established manufacturers 
+                  in Kalamazoo - we've helped them all build amazing workplaces! 💼
                 </p>
               </div>
             </div>
@@ -109,13 +109,13 @@ export default async function AboutPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-pink-400 to-pink-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
                   <Briefcase className="w-12 h-12 text-white" />
                 </div>
-                <div className="text-handwriting text-3xl text-accent-600 mb-2">Real Results</div>
+                <div className="text-handwriting text-3xl text-accent-600 mb-2">Proven Results</div>
                 <h3 className="text-xl font-bold text-secondary-900 mb-4 font-whimsy">
-                  That Make Hearts Sing
+                  That Transform Communities
                 </h3>
                 <p className="text-secondary-700 font-whimsy">
-                  Reduced turnover, happier employees, stronger cultures, 
-                  and way less HR stress. The magic is real! ✨
+                  Happier employees, stronger companies, and thriving neighborhoods 
+                  across Kent, Ottawa, Allegan, and Kalamazoo counties! ✨
                 </p>
               </div>
             </div>
@@ -123,19 +123,38 @@ export default async function AboutPage() {
         </div>
       </section>
 
+      {/* Local Connection Section */}
+      <section className="py-20 section-whimsy relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="card-whimsy p-12 max-w-4xl mx-auto text-center relative overflow-hidden">
+            <div className="text-handwriting text-4xl text-accent-600 mb-6">Why West Michigan?</div>
+            <h2 className="text-3xl font-bold text-secondary-900 mb-6 font-whimsy">
+              Because This is Home
+            </h2>
+            <p className="text-lg text-secondary-700 leading-relaxed font-whimsy">
+              From cheering on the Griffins to enjoying ArtPrize, from hiking the lakeshore 
+              to supporting local farmers markets - we're not just consultants, we're neighbors. 
+              We understand the values that make West Michigan special: hard work, community 
+              spirit, and genuine care for each other. That's exactly what we bring to your 
+              business's HR challenges.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       {teamMembers.length > 0 && (
-        <section className="py-20 section-whimsy relative">
+        <section className="py-20 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="text-handwriting text-5xl text-accent-600 mb-4">
-                Meet our magical crew
+                Meet your West Michigan
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 font-whimsy">
-                The Dream Team
+                HR Partners
               </h2>
               <p className="text-xl text-secondary-700 font-whimsy max-w-2xl mx-auto">
-                Experienced professionals who believe work should be wonderful 💫
+                Experienced professionals who call West Michigan home 🏡
               </p>
             </div>
             
@@ -145,7 +164,7 @@ export default async function AboutPage() {
                   <div className="card-whimsy text-center p-8 hover:scale-105 transition-transform duration-300 relative overflow-hidden">
                     {/* Floating sparkle on hover */}
                     <div className="absolute top-4 right-4 text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-bounce-soft">
-                      ✨
+                      ⭐
                     </div>
                     
                     {member.metadata?.headshot && (
@@ -192,7 +211,7 @@ export default async function AboutPage() {
                       
                       {member.metadata?.years_experience && (
                         <p className="text-handwriting text-accent-600 text-base">
-                          {member.metadata.years_experience} years of magic ✨
+                          {member.metadata.years_experience} years serving West Michigan ⭐
                         </p>
                       )}
                     </div>
@@ -208,22 +227,22 @@ export default async function AboutPage() {
       <section className="py-20 bg-gradient-accent text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="text-handwriting text-6xl mb-6 animate-bounce-soft">
-            Ready to join our
+            Ready to build something
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 font-whimsy">
-            Magic Circle?
+            Amazing Together?
           </h2>
           <p className="text-xl mb-8 text-purple-100 font-whimsy max-w-3xl mx-auto leading-relaxed">
-            Let's create something absolutely magical together! We can't wait to learn about 
-            your business and sprinkle some HR magic into your workplace. The best part? 
-            Your first consultation is completely free - no strings attached! 🎁
+            Let's create an exceptional workplace that reflects West Michigan values - 
+            collaborative, innovative, and genuinely caring. Your first consultation is 
+            completely free, because that's how neighbors help neighbors! 🤝
           </p>
           <Link 
             href="/contact" 
             className="inline-flex items-center px-10 py-5 bg-white text-accent-600 font-bold text-lg rounded-3xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 font-whimsy group"
           >
             <Heart className="w-6 h-6 mr-3 group-hover:animate-wiggle" />
-            Let's Create Magic Together
+            Start Our Partnership Today
             <Sparkles className="w-6 h-6 ml-3 group-hover:animate-wiggle animation-delay-200" />
           </Link>
         </div>
@@ -231,8 +250,8 @@ export default async function AboutPage() {
         {/* Floating elements */}
         <div className="absolute top-10 left-10 w-16 h-16 bg-white/10 rounded-full floating-element"></div>
         <div className="absolute bottom-20 right-20 w-12 h-12 bg-pink-300/20 rounded-blob floating-element animation-delay-400"></div>
-        <div className="absolute top-1/2 left-16 text-6xl opacity-10 floating-element animation-delay-600">💜</div>
-        <div className="absolute bottom-32 right-32 text-4xl opacity-15 floating-element animation-delay-800">✨</div>
+        <div className="absolute top-1/2 left-16 text-6xl opacity-10 floating-element animation-delay-600">🏔️</div>
+        <div className="absolute bottom-32 right-32 text-4xl opacity-15 floating-element animation-delay-800">⭐</div>
       </section>
     </div>
   )

@@ -29,15 +29,15 @@ export default async function HomePage() {
             {/* Left Content */}
             <div className="animate-fade-in-up pt-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
-                Be Ready
+                Build Great
                 <br />
-                <span className="text-vibrant-500">Challenge</span> Best
+                <span className="text-vibrant-500">Workplaces</span> in
                 <br />
-                Moments.
+                West Michigan.
               </h1>
               
               <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg font-medium">
-                Professional HR brings valuable insights to people's wellbeing.
+                Expert HR consulting tailored for West Michigan's unique business landscape. From Grand Rapids to Kalamazoo, we help companies thrive.
               </p>
               
               {/* Community badge similar to original */}
@@ -47,27 +47,27 @@ export default async function HomePage() {
                     <div className="w-8 h-8 bg-vibrant-400 rounded-full border-2 border-white"></div>
                     <div className="w-8 h-8 bg-blue-400 rounded-full border-2 border-white"></div>
                   </div>
-                  <div className="text-xs font-black text-gray-500">150+</div>
+                  <div className="text-xs font-black text-gray-500">75+</div>
                 </div>
                 <div className="text-sm font-semibold text-gray-900">
-                  Join our ever<br />
-                  growing community.
+                  West Michigan<br />
+                  companies served.
                 </div>
               </div>
               
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-12 mb-16">
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">08+</div>
-                  <p className="text-sm text-gray-600 leading-tight">Years of experience<br />in HR consulting</p>
+                  <div className="text-4xl font-black text-vibrant-500 mb-3">15+</div>
+                  <p className="text-sm text-gray-600 leading-tight">Years serving<br />West Michigan businesses</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">8M+</div>
-                  <p className="text-sm text-gray-600 leading-tight">Trust People<br />Around Worldwide</p>
+                  <div className="text-4xl font-black text-vibrant-500 mb-3">40%</div>
+                  <p className="text-sm text-gray-600 leading-tight">Average turnover<br />reduction achieved</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">26</div>
-                  <p className="text-sm text-gray-600 leading-tight">Exclusive assets<br />crosschain swaps</p>
+                  <div className="text-4xl font-black text-vibrant-500 mb-3">100%</div>
+                  <p className="text-sm text-gray-600 leading-tight">Michigan employment<br />law compliant</p>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default async function HomePage() {
                     <div className="w-72 h-72 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&auto=format,compress"
-                        alt="Professional HR Consulting"
+                        alt="West Michigan HR Consulting Professional"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -96,7 +96,7 @@ export default async function HomePage() {
                         <div className="w-8 h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
                           <Users className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-xs font-bold text-gray-900">Community</span>
+                        <span className="text-xs font-bold text-gray-900">Local Expert</span>
                       </div>
                     </div>
                     
@@ -105,7 +105,7 @@ export default async function HomePage() {
                         <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
                           <TrendingUp className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-xs font-bold text-gray-900">Leveling Up</span>
+                        <span className="text-xs font-bold text-gray-900">Growth Focused</span>
                       </div>
                     </div>
                   </div>
@@ -116,8 +116,8 @@ export default async function HomePage() {
                   <div className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
                     <div>
-                      <div className="text-sm font-black text-gray-900">Most Trusted</div>
-                      <div className="text-xs text-gray-600 leading-tight">Security in Limitless<br />exchange</div>
+                      <div className="text-sm font-black text-gray-900">Michigan Based</div>
+                      <div className="text-xs text-gray-600 leading-tight">Deep local market<br />knowledge</div>
                     </div>
                   </div>
                 </div>
@@ -140,9 +140,9 @@ export default async function HomePage() {
               <span className="text-2xl">+</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-              Join our ever
+              Why West Michigan
               <br />
-              <span className="text-vibrant-500">growing</span> community.
+              <span className="text-vibrant-500">Trusts</span> Us
             </h2>
           </div>
           
@@ -152,10 +152,10 @@ export default async function HomePage() {
                 <Users className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-4">
-                Local Expertise
+                Born & Raised Local
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Deep understanding of West Michigan's business culture and market dynamics.
+                Lifelong West Michigan residents who understand our region's unique business culture, from lakeshore manufacturing to downtown tech startups.
               </p>
             </div>
             
@@ -164,10 +164,10 @@ export default async function HomePage() {
                 <TrendingUp className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-4">
-                Measurable Results
+                Proven Impact
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Data-driven approach delivering reduced turnover and improved culture.
+                Consistently deliver 40%+ turnover reduction and measurable culture improvements for companies across Kent, Ottawa, and Kalamazoo counties.
               </p>
             </div>
             
@@ -176,10 +176,10 @@ export default async function HomePage() {
                 <Shield className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-4">
-                Complete Protection
+                Michigan Law Experts
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Stay ahead of compliance with our proactive HR management approach.
+                Stay ahead of Michigan's evolving employment landscape with expertise in state-specific regulations and regional compliance requirements.
               </p>
             </div>
           </div>
@@ -196,12 +196,12 @@ export default async function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                Services Tailored
+                HR Solutions for
                 <br />
-                to <span className="text-vibrant-500">Your Needs</span>
+                <span className="text-vibrant-500">Every</span> West Michigan Business
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                From strategic planning to day-to-day operations
+                From Zeeland startups to Kalamazoo manufacturers, we've got you covered
               </p>
             </div>
             
@@ -215,7 +215,7 @@ export default async function HomePage() {
             
             <div className="text-center">
               <Link href="/services" className="inline-flex items-center px-12 py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-1">
-                View All Services
+                Explore All Services
                 <ArrowRight className="w-5 h-5 ml-3" />
               </Link>
             </div>
@@ -229,9 +229,9 @@ export default async function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                What Our
+                West Michigan
                 <br />
-                <span className="text-vibrant-500">Clients Say</span>
+                <span className="text-vibrant-500">Success</span> Stories
               </h2>
             </div>
             
@@ -250,19 +250,19 @@ export default async function HomePage() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
           <h2 className="text-5xl md:text-6xl font-black mb-8 text-gray-900 leading-tight">
-            Let's Build Success
+            Ready to Transform
             <br />
-            Together
+            Your Workplace?
           </h2>
           <p className="text-xl mb-12 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Schedule a complimentary consultation to discuss how we can help your 
-            West Michigan business achieve its HR goals.
+            Join the growing community of West Michigan businesses creating exceptional workplaces. 
+            Let's start with a free consultation to explore what's possible for your team.
           </p>
           <Link 
             href="/contact" 
             className="inline-flex items-center px-12 py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-1"
           >
-            Schedule Free Consultation
+            Schedule Your Free Consultation
             <ArrowRight className="w-5 h-5 ml-3" />
           </Link>
         </div>
