@@ -25,9 +25,9 @@ export default async function HomePage() {
       {/* Hero Section - Fixed positioning and better alignment */}
       <section className="relative py-16 lg:py-24 xl:py-32 bg-white overflow-hidden min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Content - Better width control and centering */}
-            <div className="lg:col-span-7 animate-fade-in-up flex flex-col justify-center">
+            <div className="lg:col-span-7 animate-fade-in-up flex flex-col justify-start">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 lg:mb-8 leading-[0.9] tracking-tight max-w-4xl">
                 Build Great
                 <br />
@@ -72,13 +72,13 @@ export default async function HomePage() {
               </div>
             </div>
             
-            {/* Right Content - Better positioning and centering */}
-            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative flex items-center justify-center">
-              <div className="relative max-w-lg mx-auto lg:max-w-none w-full flex items-center justify-center">
-                {/* Main hero shape with floating elements - Better centered */}
-                <div className="relative flex items-center justify-center">
+            {/* Right Content - Aligned to top to match text positioning */}
+            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative flex items-start justify-center pt-0">
+              <div className="relative max-w-lg mx-auto lg:max-w-none w-full flex items-start justify-center">
+                {/* Main hero shape with floating elements - Aligned to top */}
+                <div className="relative flex items-start justify-center pt-0">
                   {/* Large pink organic shape */}
-                  <div className="w-64 h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute"></div>
+                  <div className="w-64 h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute top-8"></div>
                   <div className="relative bg-white rounded-[3rem] p-6 lg:p-8 shadow-xl border border-gray-100">
                     
                     {/* Professional image - Better sizing and centering */}
