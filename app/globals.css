@@ -6,8 +6,8 @@
 :root {
   --warm-cream: #fdf4e8;
   --warm-beige: #f6d9b3;
-  --accent-purple: #8b5cf6;
-  --accent-pink: #ec4899;
+  --accent-orange: #d67b2f;
+  --accent-amber: #e09555;
   --text-dark: #4a4531;
   --text-medium: #665e42;
 }
@@ -31,8 +31,8 @@
   }
   
   .btn-outline {
-    @apply inline-flex items-center px-8 py-4 border-2 border-accent-500 text-accent-600 
-           font-semibold rounded-xl hover:bg-accent-500 hover:text-white transition-all 
+    @apply inline-flex items-center px-8 py-4 border-2 border-primary-500 text-primary-600 
+           font-semibold rounded-xl hover:bg-primary-500 hover:text-white transition-all 
            duration-300;
   }
   
@@ -50,7 +50,7 @@
   }
   
   .text-accent-script {
-    @apply font-display text-accent-600;
+    @apply font-display text-primary-600;
   }
   
   .decorative-element {
@@ -71,12 +71,12 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--accent-purple);
+    background: var(--accent-orange);
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-pink);
+    background: var(--accent-amber);
   }
 }
 

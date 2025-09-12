@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Professional warm color palette
+        // Professional orange color palette
         primary: {
           50: '#fdf8f3',
           100: '#f7e6d3',
@@ -35,16 +35,16 @@ const config: Config = {
           900: '#4a4531',
         },
         accent: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
+          50: '#fdf8f3',
+          100: '#f7e6d3',
+          200: '#f0cca7',
+          300: '#e8b07b',
+          400: '#e09555',
+          500: '#d67b2f',
+          600: '#c06629',
+          700: '#9d5322',
+          800: '#7a401c',
+          900: '#4d2911',
         },
         warm: {
           50: '#fefcf7',
@@ -93,8 +93,8 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-warm': 'linear-gradient(135deg, #fdf4e8 0%, #f6d9b3 100%)',
-        'gradient-subtle': 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #fdf4e8 100%)',
-        'gradient-accent': 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+        'gradient-subtle': 'linear-gradient(135deg, #fdf8f3 0%, #f7e6d3 50%, #fdf4e8 100%)',
+        'gradient-accent': 'linear-gradient(135deg, #d67b2f 0%, #e09555 100%)',
       },
     },
   },

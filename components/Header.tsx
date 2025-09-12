@@ -29,10 +29,10 @@ export default function Header() {
               <Award className="w-6 h-6 text-white" />
             </div>
             <div>
-              <div className="text-2xl font-bold text-secondary-900 group-hover:text-accent-600 transition-colors duration-300">
+              <div className="text-2xl font-bold text-secondary-900 group-hover:text-primary-600 transition-colors duration-300">
                 West Michigan HR
               </div>
-              <div className="text-sm text-accent-600 font-medium -mt-1">
+              <div className="text-sm text-primary-600 font-medium -mt-1">
                 Consulting
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-secondary-700 hover:text-accent-600 font-medium transition-colors duration-200 hover:scale-105 transform"
+                className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200 hover:scale-105 transform"
               >
                 {item.name}
               </Link>
@@ -63,7 +63,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-accent-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-primary-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -82,7 +82,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-700 hover:text-accent-600 font-medium py-3 px-4 rounded-xl hover:bg-warm-100 transition-all duration-200"
+                  className="text-secondary-700 hover:text-primary-600 font-medium py-3 px-4 rounded-xl hover:bg-warm-100 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

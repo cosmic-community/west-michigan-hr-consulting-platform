@@ -16,14 +16,14 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-secondary-900">West Michigan HR</h3>
-                <div className="text-accent-600 font-medium">Consulting</div>
+                <div className="text-primary-600 font-medium">Consulting</div>
               </div>
             </div>
             <p className="text-secondary-700 mb-6 text-lg max-w-lg leading-relaxed">
               Providing comprehensive HR solutions to help West Michigan businesses 
               thrive through expert guidance, strategic planning, and proven methodologies.
             </p>
-            <div className="text-accent-600 font-medium">
+            <div className="text-primary-600 font-medium">
               Serving West Michigan since 2020
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href} 
-                    className="text-secondary-700 hover:text-accent-600 transition-colors hover:underline decoration-2 decoration-accent-400"
+                    className="text-secondary-700 hover:text-primary-600 transition-colors hover:underline decoration-2 decoration-primary-400"
                   >
                     {link.name}
                   </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
                 </div>
                 <a 
                   href="tel:+1234567890" 
-                  className="hover:text-accent-600 transition-colors hover:underline decoration-2 decoration-accent-400"
+                  className="hover:text-primary-600 transition-colors hover:underline decoration-2 decoration-primary-400"
                 >
                   (123) 456-7890
                 </a>
@@ -77,7 +77,7 @@ export default function Footer() {
                 </div>
                 <a 
                   href="mailto:hello@westmichiganhr.com" 
-                  className="hover:text-accent-600 transition-colors hover:underline decoration-2 decoration-accent-400"
+                  className="hover:text-primary-600 transition-colors hover:underline decoration-2 decoration-primary-400"
                 >
                   hello@westmichiganhr.com
                 </a>
@@ -99,14 +99,14 @@ export default function Footer() {
           <p className="text-secondary-600">
             &copy; {currentYear} West Michigan HR Consulting. Professional HR solutions for growing businesses.
           </p>
-          <div className="text-accent-600 font-medium mt-2">
+          <div className="text-primary-600 font-medium mt-2">
             Excellence in Human Resources
           </div>
         </div>
       </div>
       
       {/* Subtle decorative elements */}
-      <div className="absolute top-10 right-10 w-16 h-16 bg-accent-300/10 rounded-xl subtle-float"></div>
+      <div className="absolute top-10 right-10 w-16 h-16 bg-primary-300/10 rounded-xl subtle-float"></div>
       <div className="absolute bottom-20 left-10 w-12 h-12 bg-warm-400/10 rounded-lg subtle-float animation-delay-400"></div>
     </footer>
   )
