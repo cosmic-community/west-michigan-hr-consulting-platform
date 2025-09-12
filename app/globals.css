@@ -1,91 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --warm-cream: #fdf4e8;
+  --warm-beige: #f6d9b3;
+  --accent-purple: #8b5cf6;
+  --accent-pink: #ec4899;
+  --text-dark: #4a4531;
+  --text-medium: #665e42;
+}
+
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  body {
+    background: var(--warm-cream);
+    color: var(--text-dark);
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
   
-  body {
-    font-feature-settings: "rlig" 1, "calt" 1;
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  .prose-custom {
-    @apply text-secondary-700 leading-relaxed;
+  .btn-whimsy {
+    @apply inline-flex items-center px-8 py-4 bg-gradient-accent text-white font-medium rounded-3xl 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 
+           font-whimsy;
   }
   
-  .prose-custom h1,
-  .prose-custom h2,
-  .prose-custom h3,
-  .prose-custom h4,
-  .prose-custom h5,
-  .prose-custom h6 {
-    @apply text-secondary-900 font-semibold mt-8 mb-4;
+  .btn-outline-whimsy {
+    @apply inline-flex items-center px-8 py-4 border-2 border-accent-500 text-accent-600 
+           font-medium rounded-3xl hover:bg-accent-500 hover:text-white transition-all 
+           duration-300 font-whimsy;
   }
   
-  .prose-custom h2 {
-    @apply text-2xl;
+  .card-whimsy {
+    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 
+           transition-all duration-300 border border-warm-200;
   }
   
-  .prose-custom h3 {
-    @apply text-xl;
+  .section-warm {
+    @apply bg-gradient-warm;
   }
   
-  .prose-custom p {
-    @apply mb-4;
+  .section-whimsy {
+    @apply bg-gradient-whimsy relative overflow-hidden;
   }
   
-  .prose-custom ul,
-  .prose-custom ol {
-    @apply mb-4 pl-6;
+  .text-handwriting {
+    @apply font-handwriting text-accent-600;
   }
   
-  .prose-custom ul {
-    @apply list-disc;
+  .decorative-element {
+    @apply absolute opacity-20 pointer-events-none;
   }
   
-  .prose-custom ol {
-    @apply list-decimal;
+  .floating-element {
+    @apply animate-float;
   }
   
-  .prose-custom li {
-    @apply mb-2;
+  .wiggle-element {
+    @apply hover:animate-wiggle;
   }
   
-  .prose-custom a {
-    @apply text-primary-600 hover:text-primary-700 underline;
+  .blob-shape {
+    @apply rounded-blob;
   }
   
-  .prose-custom strong {
-    @apply font-semibold text-secondary-900;
+  /* Whimsical dotted background */
+  .dotted-bg {
+    background-image: var(--dotted-pattern);
+    background-size: var(--dotted);
   }
   
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  .star-bg {
+    background-image: var(--star-pattern);
+    background-size: var(--star);
   }
   
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-secondary-300 text-base font-medium rounded-md text-secondary-700 bg-white hover:bg-secondary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
   }
   
-  .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  ::-webkit-scrollbar-track {
+    background: var(--warm-cream);
   }
   
-  .card-hover {
-    @apply transition-shadow duration-200 hover:shadow-lg;
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-purple);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-pink);
+  }
+  
+  /* Floating shapes animation */
+  @keyframes float-shapes {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg); 
+    }
+    33% { 
+      transform: translateY(-15px) rotate(5deg); 
+    }
+    66% { 
+      transform: translateY(-5px) rotate(-3deg); 
+    }
+  }
+  
+  .floating-shapes {
+    animation: float-shapes 6s ease-in-out infinite;
   }
 }
 
 @layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+  .text-balance {
+    text-wrap: balance;
   }
   
-  .animate-slide-up {
-    animation: slideUp 0.5s ease-out;
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
   }
 }

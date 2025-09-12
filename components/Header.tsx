@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Heart, Sparkles } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,15 +17,25 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b-4 border-warm-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-2xl font-bold text-primary-900 hover:text-primary-700 transition-colors"
+            className="group flex items-center gap-3"
           >
-            HR Consulting
+            <div className="w-12 h-12 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:animate-wiggle transition-transform duration-300">
+              <Heart className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-secondary-900 font-whimsy group-hover:text-accent-600 transition-colors duration-300">
+                HR Magic
+              </div>
+              <div className="text-handwriting text-sm text-accent-600 -mt-1">
+                West Michigan
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -34,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-secondary-700 hover:text-accent-600 font-medium transition-colors duration-200 font-whimsy hover:scale-105 transform"
               >
                 {item.name}
               </Link>
@@ -43,17 +53,17 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="btn-primary flex items-center gap-2"
+              className="btn-whimsy flex items-center gap-2 text-sm px-6 py-3"
             >
-              <Phone className="w-4 h-4" />
-              Free Consultation
+              <Sparkles className="w-4 h-4" />
+              Free Magic Session
             </Link>
           </nav>
 
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-secondary-600 hover:text-secondary-900 hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="md:hidden p-2 rounded-2xl text-secondary-600 hover:text-accent-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -66,13 +76,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-secondary-200">
+          <div className="md:hidden py-6 border-t border-warm-200">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-700 hover:text-primary-600 font-medium py-2 transition-colors duration-200"
+                  className="text-secondary-700 hover:text-accent-600 font-medium py-3 px-4 rounded-2xl hover:bg-warm-100 transition-all duration-200 font-whimsy"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -81,11 +91,11 @@ export default function Header() {
               
               <Link
                 href="/contact"
-                className="btn-primary flex items-center justify-center gap-2 w-full mt-4"
+                className="btn-whimsy flex items-center justify-center gap-2 w-full mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Phone className="w-4 h-4" />
-                Free Consultation
+                <Sparkles className="w-4 h-4" />
+                Free Magic Session
               </Link>
             </div>
           </div>
