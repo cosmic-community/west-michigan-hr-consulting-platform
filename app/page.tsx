@@ -22,13 +22,13 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col bg-white min-h-screen">
-      {/* Hero Section - Improved layout for full-screen displays */}
-      <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Hero Section - Fixed positioning and better alignment */}
+      <section className="relative py-16 lg:py-24 xl:py-32 bg-white overflow-hidden min-h-[90vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left Content - Better width control */}
-            <div className="lg:col-span-7 animate-fade-in-up">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight max-w-4xl">
+            {/* Left Content - Better width control and centering */}
+            <div className="lg:col-span-7 animate-fade-in-up flex flex-col justify-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 lg:mb-8 leading-[0.9] tracking-tight max-w-4xl">
                 Build Great
                 <br />
                 <span className="text-vibrant-500">Workplaces</span> in
@@ -36,12 +36,12 @@ export default async function HomePage() {
                 West Michigan.
               </h1>
               
-              <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl font-medium">
+              <p className="text-lg sm:text-xl text-gray-600 mb-10 lg:mb-12 leading-relaxed max-w-2xl font-medium">
                 Expert HR consulting tailored for West Michigan's unique business landscape. From Grand Rapids to Kalamazoo, we help companies thrive.
               </p>
               
               {/* Community badge */}
-              <div className="flex items-center gap-6 mb-16">
+              <div className="flex items-center gap-6 mb-12 lg:mb-16">
                 <div className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-2xl">
                   <div className="flex -space-x-2">
                     <div className="w-8 h-8 bg-vibrant-400 rounded-full border-2 border-white"></div>
@@ -72,17 +72,17 @@ export default async function HomePage() {
               </div>
             </div>
             
-            {/* Right Content - Better proportional sizing */}
-            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative">
-              <div className="relative max-w-lg mx-auto lg:max-w-none">
-                {/* Main hero shape with floating elements */}
-                <div className="relative">
+            {/* Right Content - Better positioning and centering */}
+            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative flex items-center justify-center">
+              <div className="relative max-w-lg mx-auto lg:max-w-none w-full flex items-center justify-center">
+                {/* Main hero shape with floating elements - Better centered */}
+                <div className="relative flex items-center justify-center">
                   {/* Large pink organic shape */}
-                  <div className="w-72 h-72 lg:w-80 lg:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute -top-8 -right-8"></div>
+                  <div className="w-64 h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute"></div>
                   <div className="relative bg-white rounded-[3rem] p-6 lg:p-8 shadow-xl border border-gray-100">
                     
-                    {/* Professional image - responsive sizing */}
-                    <div className="w-64 h-64 lg:w-72 lg:h-72 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden mx-auto">
+                    {/* Professional image - Better sizing and centering */}
+                    <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden mx-auto">
                       <img
                         src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&auto=format,compress"
                         alt="West Michigan HR Consulting Professional"
@@ -90,7 +90,7 @@ export default async function HomePage() {
                       />
                     </div>
                     
-                    {/* Floating badges - responsive positioning */}
+                    {/* Floating badges - Better responsive positioning */}
                     <div className="absolute -top-3 -right-3 bg-white p-2 lg:p-3 rounded-xl shadow-lg border border-gray-100">
                       <div className="flex items-center gap-2">
                         <div className="w-6 h-6 lg:w-8 lg:h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
@@ -111,8 +111,8 @@ export default async function HomePage() {
                   </div>
                 </div>
                 
-                {/* Trust badge - responsive positioning */}
-                <div className="absolute bottom-12 lg:bottom-16 right-12 lg:right-16 bg-white p-3 lg:p-4 rounded-xl shadow-lg border border-gray-100">
+                {/* Trust badge - Better positioning */}
+                <div className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 bg-white p-3 lg:p-4 rounded-xl shadow-lg border border-gray-100">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
                     <div>
