@@ -23,11 +23,11 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col bg-white min-h-screen">
       {/* Hero Section - Clean white with minimal elements */}
-      <section className="relative py-32 bg-white overflow-hidden">
+      <section className="relative py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
-            <div className="animate-fade-in-up">
+            <div className="animate-fade-in-up pt-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
                 Be Ready
                 <br />
@@ -72,17 +72,17 @@ export default async function HomePage() {
               </div>
             </div>
             
-            {/* Right Content - Hero Image Area */}
-            <div className="animate-slide-up animation-delay-400 relative">
+            {/* Right Content - Hero Image Area - Moved up */}
+            <div className="animate-slide-up animation-delay-400 relative -mt-4">
               <div className="relative">
                 {/* Main hero shape with floating elements */}
                 <div className="relative">
                   {/* Large pink organic shape */}
-                  <div className="w-96 h-96 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute -top-10 -right-10"></div>
-                  <div className="relative bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100">
+                  <div className="w-80 h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute -top-8 -right-8"></div>
+                  <div className="relative bg-white rounded-[3rem] p-8 shadow-xl border border-gray-100">
                     
                     {/* Minimal professional image */}
-                    <div className="w-80 h-80 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                    <div className="w-72 h-72 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
                       <img
                         src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&auto=format,compress"
                         alt="Professional HR Consulting"
@@ -90,33 +90,33 @@ export default async function HomePage() {
                       />
                     </div>
                     
-                    {/* Floating badges */}
-                    <div className="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-vibrant-500 rounded-full flex items-center justify-center">
-                          <Users className="w-5 h-5 text-white" />
+                    {/* Floating badges - adjusted positioning */}
+                    <div className="absolute -top-3 -right-3 bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
+                          <Users className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-sm font-bold text-gray-900">Community</span>
+                        <span className="text-xs font-bold text-gray-900">Community</span>
                       </div>
                     </div>
                     
-                    <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center">
-                          <TrendingUp className="w-5 h-5 text-white" />
+                    <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                          <TrendingUp className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-sm font-bold text-gray-900">Leveling Up</span>
+                        <span className="text-xs font-bold text-gray-900">Leveling Up</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Trust badge */}
-                <div className="absolute bottom-20 right-20 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
+                {/* Trust badge - repositioned */}
+                <div className="absolute bottom-16 right-16 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
                     <div>
-                      <div className="text-base font-black text-gray-900">Most Trusted</div>
+                      <div className="text-sm font-black text-gray-900">Most Trusted</div>
                       <div className="text-xs text-gray-600 leading-tight">Security in Limitless<br />exchange</div>
                     </div>
                   </div>
