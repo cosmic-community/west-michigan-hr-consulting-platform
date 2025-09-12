@@ -8,52 +8,58 @@
   --vibrant-purple: #c639d8;
   --vibrant-deep: #a729b8;
   --soft-pink: #fceaff;
-  --text-dark: #0f172a;
-  --text-medium: #334155;
+  --text-dark: #111827;
+  --text-medium: #374151;
 }
 
 @layer base {
   body {
-    background: linear-gradient(135deg, #fef7ff 0%, #fceaff 25%, #f8d5fe 50%, #f2b4fc 75%, #ea84f8 100%);
+    background: white;
     color: var(--text-dark);
     font-feature-settings: "rlig" 1, "calt" 1;
-    min-height: 100vh;
-    background-attachment: fixed;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   html {
     scroll-behavior: smooth;
   }
+  
+  * {
+    box-sizing: border-box;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center px-8 py-4 bg-gradient-vibrant text-white font-bold rounded-2xl 
-           shadow-vibrant hover:shadow-glow transform hover:-translate-y-1 hover:scale-105 
+    @apply inline-flex items-center px-8 py-4 bg-gray-900 text-white font-bold rounded-2xl 
+           shadow-lg hover:bg-vibrant-500 transform hover:-translate-y-1 hover:shadow-xl
            transition-all duration-300 border-0;
   }
   
   .btn-outline {
-    @apply inline-flex items-center px-8 py-4 border-2 border-vibrant-500 text-vibrant-600 
-           font-bold rounded-2xl hover:bg-vibrant-500 hover:text-white hover:shadow-vibrant
+    @apply inline-flex items-center px-8 py-4 border-2 border-gray-900 text-gray-900 
+           font-bold rounded-2xl hover:bg-gray-900 hover:text-white hover:shadow-lg
            transform hover:-translate-y-1 transition-all duration-300;
   }
   
   .btn-soft {
-    @apply inline-flex items-center px-8 py-4 bg-white/90 backdrop-blur-sm text-vibrant-600 
-           font-bold rounded-2xl shadow-soft hover:shadow-vibrant border border-vibrant-200
-           transform hover:-translate-y-1 hover:scale-105 transition-all duration-300;
+    @apply inline-flex items-center px-8 py-4 bg-gray-100 text-gray-900 
+           font-bold rounded-2xl hover:bg-gray-900 hover:text-white hover:shadow-lg
+           transform hover:-translate-y-1 transition-all duration-300;
   }
   
   .card-elevated {
-    @apply bg-white/95 backdrop-blur-sm rounded-3xl shadow-soft hover:shadow-vibrant 
-           transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 
-           border border-white/50;
+    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl 
+           transform hover:-translate-y-2 transition-all duration-300 
+           border border-gray-100;
   }
   
   .card-vibrant {
-    @apply bg-gradient-vibrant text-white rounded-3xl shadow-vibrant hover:shadow-glow
-           transform hover:-translate-y-2 hover:scale-105 transition-all duration-300;
+    @apply bg-vibrant-500 text-white rounded-3xl shadow-lg hover:shadow-xl
+           transform hover:-translate-y-2 transition-all duration-300;
   }
   
   .floating-element {
@@ -61,43 +67,42 @@
   }
   
   .section-hero {
-    @apply relative overflow-hidden min-h-screen flex items-center;
+    @apply relative overflow-hidden min-h-screen flex items-center bg-white;
   }
   
   .section-modern {
-    @apply relative py-20 overflow-hidden;
+    @apply relative py-20 overflow-hidden bg-white;
   }
   
   .text-vibrant-gradient {
-    @apply bg-gradient-vibrant bg-clip-text text-transparent font-bold;
+    @apply text-vibrant-500 font-bold;
   }
   
   .glass-effect {
-    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg;
+    @apply bg-white/90 backdrop-blur-md border border-gray-100 shadow-lg;
   }
   
   .floating-badge {
-    @apply absolute bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold
-           shadow-soft border border-vibrant-200 transform hover:scale-105 transition-all duration-300;
+    @apply absolute bg-white px-4 py-2 rounded-2xl text-sm font-bold
+           shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300;
   }
   
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    background: #f9fafb;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--vibrant-pink);
-    border-radius: 4px;
+    background: #dd54f0;
+    border-radius: 3px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--vibrant-purple);
+    background: #c639d8;
   }
 }
 
@@ -106,51 +111,79 @@
     text-wrap: balance;
   }
   
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
   .animation-delay-200 {
     animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
   }
   
   .animation-delay-400 {
     animation-delay: 400ms;
   }
   
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  
   .animation-delay-600 {
     animation-delay: 600ms;
+  }
+  
+  .animation-delay-700 {
+    animation-delay: 700ms;
   }
   
   .animation-delay-800 {
     animation-delay: 800ms;
   }
-  
-  .animation-delay-1000 {
-    animation-delay: 1000ms;
+}
+
+/* Animation keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Glowing effects */
-.glow-pink {
-  box-shadow: 0 0 20px rgba(221, 84, 240, 0.5);
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px rgba(198, 57, 216, 0.5);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
-/* Floating animation variations */
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
-@keyframes float-fast {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-25px); }
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
 }
 
-.animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
-}
-
-.animate-float-fast {
-  animation: float-fast 4s ease-in-out infinite;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

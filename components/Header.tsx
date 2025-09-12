@@ -2,39 +2,34 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Award, ArrowRight, Sparkles } from 'lucide-react'
+import { Menu, X, Sparkles } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Products', href: '/services' },
+    { name: 'Exchange now', href: '/about' },
+    { name: 'Wallet', href: '/blog' },
+    { name: 'Features', href: '/case-studies' },
+    { name: 'Help', href: '/contact' },
+    { name: 'About us', href: '/about' },
   ]
 
   return (
-    <header className="bg-white/90 backdrop-blur-lg shadow-soft sticky top-0 z-50 border-b border-vibrant-200/30">
+    <header className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link 
             href="/" 
             className="group flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-vibrant rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-vibrant">
-              <Sparkles className="w-6 h-6 text-white" />
+            <div className="w-8 h-8 bg-vibrant-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+              <span className="text-white font-black text-lg">X</span>
             </div>
-            <div>
-              <div className="text-2xl font-black text-secondary-900 group-hover:text-vibrant-600 transition-colors duration-300">
-                MOMENTX
-              </div>
-              <div className="text-sm text-vibrant-600 font-bold -mt-1">
-                HR Consulting
-              </div>
+            <div className="text-2xl font-black text-gray-900 tracking-tight">
+              MOMENTX
             </div>
           </Link>
 
@@ -44,7 +39,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-secondary-700 hover:text-vibrant-600 font-bold transition-colors duration-200 hover:scale-105 transform text-sm"
+                className="text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -53,7 +48,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="bg-secondary-900 text-white font-bold text-sm px-8 py-3 rounded-2xl hover:bg-vibrant-600 hover:shadow-vibrant transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+              className="bg-gray-900 text-white font-bold text-sm px-6 py-3 rounded-xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-0.5"
             >
               SIGN IN
             </Link>
@@ -62,7 +57,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-vibrant-600 hover:bg-vibrant-50 focus:outline-none focus:ring-2 focus:ring-vibrant-500 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -75,13 +70,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-vibrant-200/30">
+          <div className="md:hidden py-6 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-700 hover:text-vibrant-600 font-bold py-3 px-4 rounded-xl hover:bg-vibrant-50 transition-all duration-200"
+                  className="text-gray-700 hover:text-gray-900 font-semibold py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -90,7 +85,7 @@ export default function Header() {
               
               <Link
                 href="/contact"
-                className="bg-secondary-900 text-white font-bold text-center w-full mt-4 py-4 rounded-2xl hover:bg-vibrant-600 transition-all duration-300"
+                className="bg-gray-900 text-white font-bold text-center w-full mt-4 py-4 rounded-xl hover:bg-vibrant-500 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 SIGN IN

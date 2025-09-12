@@ -9,73 +9,72 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Vibrant pink/magenta color palette inspired by the image
+        // Clean vibrant pink/magenta inspired by MOMENTX
         primary: {
-          50: '#fef7ff',
-          100: '#fceaff',
-          200: '#f8d5fe',
-          300: '#f2b4fc',
-          400: '#ea84f8',
-          500: '#dd54f0',
-          600: '#c639d8',
-          700: '#a729b8',
-          800: '#8a2696',
-          900: '#6d1e77',
+          50: '#fdf2f8',
+          100: '#fce7f3',
+          200: '#fbcfe8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
+          800: '#9d174d',
+          900: '#831843',
         },
-        secondary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        },
-        accent: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
-        },
-        // Vibrant magenta/pink shades
+        // Vibrant magenta/pink shades matching the image
         vibrant: {
-          50: '#fef7ff',
-          100: '#fceaff',
-          200: '#f8d5fe',
-          300: '#f2b4fc',
-          400: '#ea84f8',
-          500: '#dd54f0',
-          600: '#c639d8',
-          700: '#a729b8',
+          50: '#fdf2f8',
+          100: '#fce7f3',
+          200: '#fbcfe8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#dd54f0', // Main vibrant pink from image
+          600: '#c639d8', // Slightly darker
+          700: '#a729b8', // Deeper tone
           800: '#8a2696',
           900: '#6d1e77',
         },
-        // Soft complementary colors
-        soft: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+        // Clean grays for minimal design
+        secondary: {
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827', // Deep black for text
         }
       },
       fontFamily: {
         'display': ['Inter', 'system-ui', 'sans-serif'],
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1rem' }],
+        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
+        'base': ['1rem', { lineHeight: '1.5rem' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
+      },
+      letterSpacing: {
+        'tighter': '-0.05em',
+        'tight': '-0.025em',
+        'normal': '0em',
+        'wide': '0.025em',
+        'wider': '0.05em',
+        'widest': '0.1em',
       },
       animation: {
         'bounce-soft': 'bounce-soft 2s ease-in-out infinite',
@@ -123,17 +122,20 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-vibrant': 'linear-gradient(135deg, #dd54f0 0%, #c639d8 50%, #a729b8 100%)',
-        'gradient-soft': 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%)',
-        'gradient-pink': 'linear-gradient(135deg, #fceaff 0%, #f8d5fe 50%, #f2b4fc 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #fef7ff 0%, #fceaff 25%, #f8d5fe  50%, #f2b4fc 75%, #ea84f8 100%)',
+        'gradient-soft': 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 50%, #e5e7eb 100%)',
       },
       backdropBlur: {
         xs: '2px',
       },
       boxShadow: {
-        'vibrant': '0 20px 40px rgba(221, 84, 240, 0.3)',
+        'vibrant': '0 20px 40px rgba(221, 84, 240, 0.15)',
         'soft': '0 10px 30px rgba(0, 0, 0, 0.1)',
-        'glow': '0 0 20px rgba(221, 84, 240, 0.4)',
+        'glow': '0 0 20px rgba(221, 84, 240, 0.3)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
       }
     },
   },

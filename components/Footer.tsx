@@ -5,33 +5,30 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-white/80 backdrop-blur-lg border-t border-vibrant-200/30 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <footer className="bg-white border-t border-gray-100 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-vibrant rounded-2xl flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-8 h-8 bg-vibrant-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-black text-lg">X</span>
               </div>
-              <div>
-                <h3 className="text-2xl font-black text-secondary-900">MOMENTX</h3>
-                <div className="text-vibrant-600 font-bold">HR Consulting</div>
-              </div>
+              <div className="text-2xl font-black text-gray-900 tracking-tight">MOMENTX</div>
             </div>
-            <p className="text-secondary-700 mb-6 text-lg max-w-lg leading-relaxed">
+            <p className="text-gray-600 mb-8 text-lg max-w-lg leading-relaxed">
               Providing innovative HR solutions to help West Michigan businesses 
               thrive through expert guidance and modern methodologies.
             </p>
-            <div className="inline-block bg-gradient-vibrant bg-clip-text text-transparent font-black">
+            <div className="text-sm font-bold text-vibrant-500">
               Serving West Michigan since 2020
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-black mb-6 text-secondary-900">Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-black mb-8 text-gray-900">Services</h4>
+            <ul className="space-y-4">
               {[
                 { name: 'HR Strategy', href: '/services' },
                 { name: 'Compliance', href: '/services' },
@@ -41,7 +38,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href} 
-                    className="text-secondary-700 hover:text-vibrant-600 transition-colors font-medium hover:underline decoration-2 decoration-vibrant-400"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
                   >
                     {link.name}
                   </Link>
@@ -52,32 +49,32 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-xl font-black mb-6 text-secondary-900">Contact</h4>
-            <div className="space-y-4 text-secondary-700">
+            <h4 className="text-lg font-black mb-8 text-gray-900">Contact</h4>
+            <div className="space-y-4 text-gray-600">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-vibrant-100 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-vibrant-600" />
+                <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-3 h-3 text-gray-600" />
                 </div>
-                <span>West Michigan Region</span>
+                <span className="text-sm">West Michigan Region</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-vibrant-100 rounded-xl flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-vibrant-600" />
+                <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <Phone className="w-3 h-3 text-gray-600" />
                 </div>
                 <a 
                   href="tel:+1234567890" 
-                  className="hover:text-vibrant-600 transition-colors hover:underline decoration-2 decoration-vibrant-400"
+                  className="hover:text-gray-900 transition-colors text-sm"
                 >
                   (123) 456-7890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-vibrant-100 rounded-xl flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-vibrant-600" />
+                <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <Mail className="w-3 h-3 text-gray-600" />
                 </div>
                 <a 
-                  href="mailto:hello@westmichiganhr.com" 
-                  className="hover:text-vibrant-600 transition-colors hover:underline decoration-2 decoration-vibrant-400"
+                  href="mailto:hello@momentx.com" 
+                  className="hover:text-gray-900 transition-colors text-sm"
                 >
                   hello@momentx.com
                 </a>
@@ -87,7 +84,7 @@ export default function Footer() {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="btn-primary text-sm px-6 py-3"
+                className="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-bold text-sm rounded-xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 Schedule Consultation
               </Link>
@@ -95,19 +92,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-vibrant-200/50 mt-12 pt-8 text-center">
-          <p className="text-secondary-600">
+        <div className="border-t border-gray-100 mt-16 pt-8 text-center">
+          <p className="text-gray-600 text-sm">
             &copy; {currentYear} MOMENTX HR Consulting. Professional HR solutions for growing businesses.
           </p>
-          <div className="text-vibrant-600 font-bold mt-2">
+          <div className="text-vibrant-500 font-bold mt-2 text-sm">
             Excellence in Human Resources
           </div>
         </div>
       </div>
-      
-      {/* Background decorative elements */}
-      <div className="absolute top-10 right-10 w-16 h-16 bg-vibrant-300/10 rounded-2xl animate-float"></div>
-      <div className="absolute bottom-20 left-10 w-12 h-12 bg-vibrant-400/10 rounded-xl animate-bounce-soft animation-delay-400"></div>
     </footer>
   )
 }
