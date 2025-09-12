@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Sparkles } from 'lucide-react'
+import { Menu, X, Users } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,10 +26,10 @@ export default function Header() {
             className="group flex items-center gap-3"
           >
             <div className="w-8 h-8 bg-vibrant-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-              <span className="text-white font-black text-lg">X</span>
+              <Users className="w-5 h-5 text-white" />
             </div>
             <div className="text-2xl font-black text-gray-900 tracking-tight">
-              MOMENTX
+              WestMich HR
             </div>
           </Link>
 

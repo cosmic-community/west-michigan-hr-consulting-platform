@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, Phone, Mail, Sparkles } from 'lucide-react'
+import { MapPin, Phone, Mail, Users } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,9 +12,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-8 bg-vibrant-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-black text-lg">X</span>
+                <Users className="w-5 h-5 text-white" />
               </div>
-              <div className="text-2xl font-black text-gray-900 tracking-tight">MOMENTX</div>
+              <div className="text-2xl font-black text-gray-900 tracking-tight">WestMich HR</div>
             </div>
             <p className="text-gray-600 mb-8 text-lg max-w-lg leading-relaxed">
               Providing innovative HR solutions to help West Michigan businesses 
@@ -73,10 +73,10 @@ export default function Footer() {
                   <Mail className="w-3 h-3 text-gray-600" />
                 </div>
                 <a 
-                  href="mailto:hello@momentx.com" 
+                  href="mailto:hello@westmichhr.com" 
                   className="hover:text-gray-900 transition-colors text-sm"
                 >
-                  hello@momentx.com
+                  hello@westmichhr.com
                 </a>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-100 mt-16 pt-8 text-center">
           <p className="text-gray-600 text-sm">
-            &copy; {currentYear} MOMENTX HR Consulting. Professional HR solutions for growing businesses.
+            &copy; {currentYear} WestMich HR Consulting. Professional HR solutions for growing businesses.
           </p>
           <div className="text-vibrant-500 font-bold mt-2 text-sm">
             Excellence in Human Resources
