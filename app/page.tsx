@@ -22,13 +22,13 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col bg-white min-h-screen">
-      {/* Hero Section - Clean white with minimal elements */}
-      <section className="relative py-16 bg-white overflow-hidden">
+      {/* Hero Section - Improved layout for full-screen displays */}
+      <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left Content */}
-            <div className="animate-fade-in-up pt-8">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Content - Better width control */}
+            <div className="lg:col-span-7 animate-fade-in-up">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 mb-8 leading-[0.9] tracking-tight max-w-4xl">
                 Build Great
                 <br />
                 <span className="text-vibrant-500">Workplaces</span> in
@@ -36,11 +36,11 @@ export default async function HomePage() {
                 West Michigan.
               </h1>
               
-              <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg font-medium">
+              <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl font-medium">
                 Expert HR consulting tailored for West Michigan's unique business landscape. From Grand Rapids to Kalamazoo, we help companies thrive.
               </p>
               
-              {/* Community badge similar to original */}
+              {/* Community badge */}
               <div className="flex items-center gap-6 mb-16">
                 <div className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-2xl">
                   <div className="flex -space-x-2">
@@ -55,34 +55,34 @@ export default async function HomePage() {
                 </div>
               </div>
               
-              {/* Stats row */}
-              <div className="grid grid-cols-3 gap-12 mb-16">
+              {/* Stats row - Better responsive layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-2xl">
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">15+</div>
+                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">15+</div>
                   <p className="text-sm text-gray-600 leading-tight">Years serving<br />West Michigan businesses</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">40%</div>
+                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">40%</div>
                   <p className="text-sm text-gray-600 leading-tight">Average turnover<br />reduction achieved</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-vibrant-500 mb-3">100%</div>
+                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">100%</div>
                   <p className="text-sm text-gray-600 leading-tight">Michigan employment<br />law compliant</p>
                 </div>
               </div>
             </div>
             
-            {/* Right Content - Hero Image Area - Moved up */}
-            <div className="animate-slide-up animation-delay-400 relative -mt-4">
-              <div className="relative">
+            {/* Right Content - Better proportional sizing */}
+            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative">
+              <div className="relative max-w-lg mx-auto lg:max-w-none">
                 {/* Main hero shape with floating elements */}
                 <div className="relative">
                   {/* Large pink organic shape */}
-                  <div className="w-80 h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute -top-8 -right-8"></div>
-                  <div className="relative bg-white rounded-[3rem] p-8 shadow-xl border border-gray-100">
+                  <div className="w-72 h-72 lg:w-80 lg:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute -top-8 -right-8"></div>
+                  <div className="relative bg-white rounded-[3rem] p-6 lg:p-8 shadow-xl border border-gray-100">
                     
-                    {/* Minimal professional image */}
-                    <div className="w-72 h-72 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                    {/* Professional image - responsive sizing */}
+                    <div className="w-64 h-64 lg:w-72 lg:h-72 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden mx-auto">
                       <img
                         src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&auto=format,compress"
                         alt="West Michigan HR Consulting Professional"
@@ -90,34 +90,34 @@ export default async function HomePage() {
                       />
                     </div>
                     
-                    {/* Floating badges - adjusted positioning */}
-                    <div className="absolute -top-3 -right-3 bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                    {/* Floating badges - responsive positioning */}
+                    <div className="absolute -top-3 -right-3 bg-white p-2 lg:p-3 rounded-xl shadow-lg border border-gray-100">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
-                          <Users className="w-4 h-4 text-white" />
+                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
+                          <Users className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
                         </div>
-                        <span className="text-xs font-bold text-gray-900">Local Expert</span>
+                        <span className="text-xs font-bold text-gray-900 hidden sm:inline">Local Expert</span>
                       </div>
                     </div>
                     
-                    <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-xl shadow-lg border border-gray-100">
+                    <div className="absolute -bottom-4 -left-4 bg-white p-2 lg:p-3 rounded-xl shadow-lg border border-gray-100">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                          <TrendingUp className="w-4 h-4 text-white" />
+                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                          <TrendingUp className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
                         </div>
-                        <span className="text-xs font-bold text-gray-900">Growth Focused</span>
+                        <span className="text-xs font-bold text-gray-900 hidden sm:inline">Growth Focused</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Trust badge - repositioned */}
-                <div className="absolute bottom-16 right-16 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+                {/* Trust badge - responsive positioning */}
+                <div className="absolute bottom-12 lg:bottom-16 right-12 lg:right-16 bg-white p-3 lg:p-4 rounded-xl shadow-lg border border-gray-100">
                   <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
                     <div>
-                      <div className="text-sm font-black text-gray-900">Michigan Based</div>
-                      <div className="text-xs text-gray-600 leading-tight">Deep local market<br />knowledge</div>
+                      <div className="text-xs lg:text-sm font-black text-gray-900">Michigan Based</div>
+                      <div className="text-xs text-gray-600 leading-tight hidden sm:block">Deep local market<br />knowledge</div>
                     </div>
                   </div>
                 </div>
