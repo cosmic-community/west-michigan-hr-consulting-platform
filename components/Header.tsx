@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Heart, Sparkles } from 'lucide-react'
+import { Menu, X, Award, ArrowRight } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +17,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b-4 border-warm-200">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-warm-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -25,15 +25,15 @@ export default function Header() {
             href="/" 
             className="group flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:animate-wiggle transition-transform duration-300">
-              <Heart className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <Award className="w-6 h-6 text-white" />
             </div>
             <div>
-              <div className="text-2xl font-bold text-secondary-900 font-whimsy group-hover:text-accent-600 transition-colors duration-300">
-                HR Magic
+              <div className="text-2xl font-bold text-secondary-900 group-hover:text-accent-600 transition-colors duration-300">
+                West Michigan HR
               </div>
-              <div className="text-handwriting text-sm text-accent-600 -mt-1">
-                West Michigan
+              <div className="text-sm text-accent-600 font-medium -mt-1">
+                Consulting
               </div>
             </div>
           </Link>
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-secondary-700 hover:text-accent-600 font-medium transition-colors duration-200 font-whimsy hover:scale-105 transform"
+                className="text-secondary-700 hover:text-accent-600 font-medium transition-colors duration-200 hover:scale-105 transform"
               >
                 {item.name}
               </Link>
@@ -53,17 +53,17 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="btn-whimsy flex items-center gap-2 text-sm px-6 py-3"
+              className="btn-primary flex items-center gap-2 text-sm px-6 py-3"
             >
-              <Sparkles className="w-4 h-4" />
-              Free Magic Session
+              Get Started
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </nav>
 
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-2xl text-secondary-600 hover:text-accent-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-accent-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -82,7 +82,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-700 hover:text-accent-600 font-medium py-3 px-4 rounded-2xl hover:bg-warm-100 transition-all duration-200 font-whimsy"
+                  className="text-secondary-700 hover:text-accent-600 font-medium py-3 px-4 rounded-xl hover:bg-warm-100 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -91,11 +91,11 @@ export default function Header() {
               
               <Link
                 href="/contact"
-                className="btn-whimsy flex items-center justify-center gap-2 w-full mt-4"
+                className="btn-primary flex items-center justify-center gap-2 w-full mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Sparkles className="w-4 h-4" />
-                Free Magic Session
+                Get Started
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

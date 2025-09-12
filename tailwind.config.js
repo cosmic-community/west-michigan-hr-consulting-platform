@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm, whimsical color palette
+        // Professional warm color palette
         primary: {
           50: '#fdf8f3',
           100: '#f7e6d3',
@@ -60,29 +60,19 @@ const config: Config = {
         }
       },
       fontFamily: {
-        'handwriting': ['Dancing Script', 'cursive'],
-        'whimsy': ['Comfortaa', 'cursive'],
+        'display': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'float': 'float 3s ease-in-out infinite',
-        'wiggle': 'wiggle 1s ease-in-out infinite',
-        'bounce-soft': 'bounce-soft 2s infinite',
+        'subtle-float': 'subtle-float 4s ease-in-out infinite',
         'fade-in-up': 'fade-in-up 0.8s ease-out',
         'fade-in': 'fade-in 0.6s ease-out',
         'slide-up': 'slide-up 0.8s ease-out',
       },
       keyframes: {
-        float: {
+        'subtle-float': {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-        'bounce-soft': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-5px)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
         'fade-in-up': {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
@@ -100,20 +90,12 @@ const config: Config = {
       borderRadius: {
         'xl': '1rem',
         '2xl': '1.5rem',
-        '3xl': '2rem',
-        'blob': '30% 70% 70% 30% / 30% 30% 70% 70%',
       },
       backgroundImage: {
         'gradient-warm': 'linear-gradient(135deg, #fdf4e8 0%, #f6d9b3 100%)',
-        'gradient-whimsy': 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #fdf4e8 100%)',
+        'gradient-subtle': 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #fdf4e8 100%)',
         'gradient-accent': 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
-        'dotted-pattern': 'radial-gradient(circle, #e8b07b 1px, transparent 1px)',
-        'star-pattern': 'radial-gradient(circle, #c4b5fd 2px, transparent 2px)',
       },
-      backgroundSize: {
-        'dotted': '20px 20px',
-        'star': '30px 30px',
-      }
     },
   },
   plugins: [

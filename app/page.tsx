@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Heart, Users, TrendingUp, Shield, Star, Sparkles } from 'lucide-react'
+import { ArrowRight, Users, TrendingUp, Shield, Star, Award } from 'lucide-react'
 import ServiceCard from '@/components/ServiceCard'
 import BlogCard from '@/components/BlogCard'
 import TestimonialCard from '@/components/TestimonialCard'
@@ -23,67 +23,64 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col overflow-hidden">
       {/* Hero Section */}
-      <section className="section-whimsy min-h-screen flex items-center relative">
+      <section className="section-accent min-h-screen flex items-center relative">
         <WhimsicalElements />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <div className="mb-6">
-                <span className="text-handwriting text-6xl md:text-7xl block mb-2 animate-bounce-soft">
-                  Transform Your
+                <span className="text-accent-script text-3xl md:text-4xl font-display block mb-4">
+                  Transform Your Workplace
                 </span>
-                <h1 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-4 font-whimsy">
-                  Workplace Magic
+                <h1 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-4">
+                  Professional HR Solutions
                 </h1>
-                <div className="text-handwriting text-2xl text-accent-600 mb-6">
-                  with West Michigan's most trusted HR experts
+                <div className="text-xl text-accent-600 mb-6 font-medium">
+                  Expert guidance for West Michigan businesses
                 </div>
               </div>
               
-              <p className="text-xl mb-8 text-secondary-700 leading-relaxed font-whimsy">
-                Let's admit it - managing people is hard. Employee relations, compliance, 
-                culture building, performance management - it can all fall on your shoulders. 
-                <span className="italic text-accent-600"> That's where we come in to work our magic! ✨</span>
+              <p className="text-xl mb-8 text-secondary-700 leading-relaxed">
+                Navigate the complexities of human resources with confidence. 
+                From compliance and employee relations to strategic planning and culture development, 
+                we provide the expertise your business needs to thrive.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/contact" className="btn-whimsy group">
-                  Schedule Your Magic Session
-                  <Sparkles className="w-5 h-5 ml-2 group-hover:animate-wiggle" />
+                <Link href="/contact" className="btn-primary group">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/services" className="btn-outline-whimsy">
-                  Explore Our Services
+                <Link href="/services" className="btn-outline">
+                  Explore Services
                 </Link>
               </div>
               
-              <div className="flex items-center gap-4 text-sm text-secondary-600 font-whimsy">
-                <div className="flex items-center gap-1">
-                  <Heart className="w-4 h-4 text-accent-500" />
-                  <span>Trusted by 100+ West Michigan businesses</span>
+              <div className="flex items-center gap-6 text-sm text-secondary-600">
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-accent-500" />
+                  <span>Certified HR Professionals</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Star className="w-5 h-5 text-accent-500" />
+                  <span>100+ Local Businesses Served</span>
                 </div>
               </div>
             </div>
             
             <div className="animate-slide-up animation-delay-400 relative">
-              {/* Decorative floating elements */}
-              <div className="absolute -top-10 -right-10 w-20 h-20 bg-accent-200 rounded-full floating-element animation-delay-200 opacity-60"></div>
-              <div className="absolute -bottom-5 -left-5 w-16 h-16 bg-warm-300 rounded-blob floating-element animation-delay-600 opacity-70"></div>
-              
-              <div className="relative bg-white rounded-3xl p-8 shadow-2xl border-4 border-warm-200">
+              <div className="relative bg-white rounded-2xl p-8 shadow-2xl border border-warm-200">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format,compress"
-                  alt="Whimsical HR Consulting"
-                  className="rounded-2xl shadow-lg"
+                  alt="Professional HR Consulting"
+                  className="rounded-xl shadow-lg"
                 />
                 
-                {/* Floating testimonial bubble */}
-                <div className="absolute -bottom-4 -left-4 bg-gradient-accent text-white p-4 rounded-2xl shadow-lg max-w-xs floating-element">
-                  <p className="text-sm font-whimsy">
-                    "They turned our HR headaches into pure joy!" 
-                    <span className="text-pink-200">💜</span>
-                  </p>
-                  <p className="text-xs mt-1 opacity-90">- Sarah, Local Business Owner</p>
+                {/* Professional stats overlay */}
+                <div className="absolute -bottom-4 -left-4 bg-white p-6 rounded-xl shadow-lg border border-warm-200">
+                  <div className="text-2xl font-bold text-secondary-900">98%</div>
+                  <p className="text-sm text-secondary-600">Client Satisfaction</p>
                 </div>
               </div>
             </div>
@@ -91,81 +88,77 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us - Whimsical Style */}
+      {/* Why Choose Us */}
       <section className="py-20 section-warm relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
-            <div className="text-handwriting text-5xl text-accent-600 mb-4">
-              Why West Michigan businesses
+            <div className="text-accent-script text-2xl font-display text-accent-600 mb-4">
+              Why West Michigan Businesses Choose Us
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 font-whimsy">
-              Choose Our Magic Touch
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+              Proven Expertise & Local Focus
             </h2>
-            <p className="text-xl text-secondary-700 max-w-3xl mx-auto font-whimsy">
-              We believe every business deserves to have a workplace that sparkles ✨
+            <p className="text-xl text-secondary-700 max-w-3xl mx-auto">
+              We combine deep HR expertise with intimate knowledge of the West Michigan business landscape
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card-whimsy p-8 text-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-accent-400 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
-                <Users className="w-10 h-10 text-white" />
+            <div className="card-elevated p-8 text-center group hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4 font-whimsy">
-                Local Love & Expertise
+              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
+                Local Expertise
               </h3>
-              <p className="text-secondary-700 font-whimsy">
-                Born and raised in West Michigan, we understand your unique challenges 
-                and celebrate your local culture! 🏔️
+              <p className="text-secondary-700 leading-relaxed">
+                Deep understanding of West Michigan's business culture, employment laws, 
+                and market dynamics ensures relevant, practical solutions.
               </p>
             </div>
             
-            <div className="card-whimsy p-8 text-center group hover:scale-105 transition-transform duration-300 animation-delay-200">
-              <div className="w-20 h-20 bg-gradient-to-br from-warm-400 to-warm-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
-                <TrendingUp className="w-10 h-10 text-white" />
+            <div className="card-elevated p-8 text-center group hover:scale-105 transition-transform duration-300 animation-delay-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-warm-400 to-warm-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4 font-whimsy">
-                Proven Magic Results
+              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
+                Measurable Results
               </h3>
-              <p className="text-secondary-700 font-whimsy">
-                Our clients see reduced turnover, happier employees, and stronger cultures. 
-                The proof is in the smiles! 😊
+              <p className="text-secondary-700 leading-relaxed">
+                Our data-driven approach delivers tangible outcomes: reduced turnover, 
+                improved compliance, and stronger organizational culture.
               </p>
             </div>
             
-            <div className="card-whimsy p-8 text-center group hover:scale-105 transition-transform duration-300 animation-delay-400">
-              <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce-soft">
-                <Shield className="w-10 h-10 text-white" />
+            <div className="card-elevated p-8 text-center group hover:scale-105 transition-transform duration-300 animation-delay-400">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4 font-whimsy">
-                Protective Shield Magic
+              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
+                Comprehensive Protection
               </h3>
-              <p className="text-secondary-700 font-whimsy">
-                We keep the scary compliance monsters away so you can focus on 
-                growing your amazing business! 🛡️
+              <p className="text-secondary-700 leading-relaxed">
+                Stay ahead of compliance requirements and mitigate risks with our 
+                proactive approach to HR management and legal protection.
               </p>
             </div>
           </div>
         </div>
-        
-        {/* Floating decorative elements */}
-        <div className="absolute top-20 left-10 w-12 h-12 bg-accent-300 rounded-full floating-element opacity-30"></div>
-        <div className="absolute bottom-20 right-10 w-8 h-8 bg-warm-400 rounded-blob floating-element opacity-40"></div>
       </section>
 
-      {/* Featured Services - Whimsical */}
+      {/* Featured Services */}
       {services.length > 0 && (
         <section className="py-20 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <div className="text-handwriting text-5xl text-accent-600 mb-4">
-                Our magical services include
+              <div className="text-accent-script text-2xl font-display text-accent-600 mb-4">
+                Comprehensive HR Solutions
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 font-whimsy">
-                Everything Your Heart Desires
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+                Services Tailored to Your Needs
               </h2>
-              <p className="text-xl text-secondary-700 font-whimsy max-w-2xl mx-auto">
-                From strategy to smiles, we've got all your HR needs covered 💫
+              <p className="text-xl text-secondary-700 max-w-2xl mx-auto">
+                From strategic planning to day-to-day operations, we provide the full spectrum of HR services
               </p>
             </div>
             
@@ -178,25 +171,25 @@ export default async function HomePage() {
             </div>
             
             <div className="text-center">
-              <Link href="/services" className="btn-whimsy">
-                Discover All Our Magic
-                <Sparkles className="w-5 h-5 ml-2" />
+              <Link href="/services" className="btn-primary">
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
         </section>
       )}
 
-      {/* Testimonials - Love Letters */}
+      {/* Testimonials */}
       {testimonials.length > 0 && (
-        <section className="py-20 section-whimsy relative">
+        <section className="py-20 section-accent relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <div className="text-handwriting text-5xl text-accent-600 mb-4">
-                Love letters from our clients
+              <div className="text-accent-script text-2xl font-display text-accent-600 mb-4">
+                Client Success Stories
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 font-whimsy">
-                What Our Friends Say
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+                What Our Clients Say
               </h2>
             </div>
             
@@ -208,40 +201,34 @@ export default async function HomePage() {
               ))}
             </div>
           </div>
-          
-          {/* Decorative hearts */}
-          <div className="absolute top-10 right-20 text-4xl text-pink-300 floating-element">💜</div>
-          <div className="absolute bottom-20 left-16 text-3xl text-pink-400 floating-element animation-delay-400">💖</div>
         </section>
       )}
 
-      {/* CTA Section - Magic Time */}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-accent text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="text-handwriting text-6xl mb-6 animate-bounce-soft">
-            Ready for some
+          <div className="text-accent-script text-3xl font-display mb-6 text-purple-100">
+            Ready to Transform Your HR?
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-whimsy">
-            Workplace Magic?
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Let's Build Success Together
           </h2>
-          <p className="text-xl mb-8 text-purple-100 font-whimsy max-w-2xl mx-auto">
-            Let's transform your HR challenges into success stories! 
-            Schedule your magical consultation today - it's absolutely free! ✨
+          <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
+            Schedule a complimentary consultation to discuss how we can help your 
+            West Michigan business achieve its HR goals.
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-10 py-5 bg-white text-accent-600 font-bold text-lg rounded-3xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 font-whimsy group"
+            className="inline-flex items-center px-10 py-5 bg-white text-accent-600 font-bold text-lg rounded-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 group"
           >
-            <Sparkles className="w-6 h-6 mr-3 group-hover:animate-wiggle" />
-            Cast Your Magic Spell Now
-            <Heart className="w-6 h-6 ml-3 group-hover:animate-wiggle animation-delay-200" />
+            Schedule Free Consultation
+            <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
         
-        {/* Floating elements */}
-        <div className="absolute top-10 left-10 w-16 h-16 bg-white/10 rounded-full floating-element"></div>
-        <div className="absolute bottom-20 right-20 w-12 h-12 bg-pink-300/20 rounded-blob floating-element animation-delay-400"></div>
-        <div className="absolute top-1/2 right-10 w-8 h-8 bg-yellow-300/30 rounded-full floating-element animation-delay-600"></div>
+        {/* Subtle background elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/5 rounded-xl subtle-float"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-pink-300/10 rounded-full subtle-float animation-delay-400"></div>
       </section>
     </div>
   )
