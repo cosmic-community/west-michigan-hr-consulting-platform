@@ -22,8 +22,8 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col bg-white min-h-screen">
-      {/* Hero Section - Fixed positioning and better alignment */}
-      <section className="relative py-16 lg:py-24 xl:py-32 bg-white overflow-hidden min-h-[90vh] flex items-center">
+      {/* Hero Section - Reduced top padding to bring closer to nav */}
+      <section className="relative py-8 lg:py-12 xl:py-16 bg-white overflow-hidden min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Content - Better width control and centering */}
