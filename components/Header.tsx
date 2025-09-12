@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Award, ArrowRight } from 'lucide-react'
+import { Menu, X, Award, ArrowRight, Sparkles } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +17,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-warm-200">
+    <header className="bg-white/90 backdrop-blur-lg shadow-soft sticky top-0 z-50 border-b border-vibrant-200/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -25,15 +25,15 @@ export default function Header() {
             href="/" 
             className="group flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-              <Award className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-vibrant rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-vibrant">
+              <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
-              <div className="text-2xl font-bold text-secondary-900 group-hover:text-primary-600 transition-colors duration-300">
-                West Michigan HR
+              <div className="text-2xl font-black text-secondary-900 group-hover:text-vibrant-600 transition-colors duration-300">
+                MOMENTX
               </div>
-              <div className="text-sm text-primary-600 font-medium -mt-1">
-                Consulting
+              <div className="text-sm text-vibrant-600 font-bold -mt-1">
+                HR Consulting
               </div>
             </div>
           </Link>
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200 hover:scale-105 transform"
+                className="text-secondary-700 hover:text-vibrant-600 font-bold transition-colors duration-200 hover:scale-105 transform text-sm"
               >
                 {item.name}
               </Link>
@@ -53,17 +53,16 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="btn-primary flex items-center gap-2 text-sm px-6 py-3"
+              className="bg-secondary-900 text-white font-bold text-sm px-8 py-3 rounded-2xl hover:bg-vibrant-600 hover:shadow-vibrant transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
             >
-              Get Started
-              <ArrowRight className="w-4 h-4" />
+              SIGN IN
             </Link>
           </nav>
 
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-primary-600 hover:bg-warm-100 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-secondary-600 hover:text-vibrant-600 hover:bg-vibrant-50 focus:outline-none focus:ring-2 focus:ring-vibrant-500 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -76,13 +75,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-warm-200">
+          <div className="md:hidden py-6 border-t border-vibrant-200/30">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-secondary-700 hover:text-primary-600 font-medium py-3 px-4 rounded-xl hover:bg-warm-100 transition-all duration-200"
+                  className="text-secondary-700 hover:text-vibrant-600 font-bold py-3 px-4 rounded-xl hover:bg-vibrant-50 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -91,11 +90,10 @@ export default function Header() {
               
               <Link
                 href="/contact"
-                className="btn-primary flex items-center justify-center gap-2 w-full mt-4"
+                className="bg-secondary-900 text-white font-bold text-center w-full mt-4 py-4 rounded-2xl hover:bg-vibrant-600 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
-                <ArrowRight className="w-4 h-4" />
+                SIGN IN
               </Link>
             </div>
           </div>
