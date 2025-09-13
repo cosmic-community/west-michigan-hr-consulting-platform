@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --vibrant-pink: #dd54f0;
-  --vibrant-purple: #c639d8;
-  --vibrant-deep: #a729b8;
-  --soft-pink: #fceaff;
-  --text-dark: #111827;
-  --text-medium: #374151;
+  --warm-olive: #9d8456;
+  --warm-brown: #a67c52;
+  --cream: #e4c285;
+  --text-dark: #202124;
+  --text-medium: #5f6368;
+  --text-light: #9aa0a6;
 }
 
 @layer base {
   body {
-    background: white;
+    background: #fefdfb;
     color: var(--text-dark);
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -30,61 +31,57 @@
   * {
     box-sizing: border-box;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center px-8 py-4 bg-gray-900 text-white font-bold rounded-2xl 
-           shadow-lg hover:bg-vibrant-500 transform hover:-translate-y-1 hover:shadow-xl
+    @apply inline-flex items-center px-8 py-4 bg-warm-olive-600 text-cream-50 font-bold rounded-2xl 
+           shadow-lg hover:bg-warm-olive-700 transform hover:-translate-y-1 hover:shadow-xl
            transition-all duration-300 border-0;
   }
   
   .btn-outline {
-    @apply inline-flex items-center px-8 py-4 border-2 border-gray-900 text-gray-900 
-           font-bold rounded-2xl hover:bg-gray-900 hover:text-white hover:shadow-lg
+    @apply inline-flex items-center px-8 py-4 border-2 border-warm-olive-600 text-warm-olive-600 
+           font-bold rounded-2xl hover:bg-warm-olive-600 hover:text-cream-50 hover:shadow-lg
            transform hover:-translate-y-1 transition-all duration-300;
   }
   
   .btn-soft {
-    @apply inline-flex items-center px-8 py-4 bg-gray-100 text-gray-900 
-           font-bold rounded-2xl hover:bg-gray-900 hover:text-white hover:shadow-lg
+    @apply inline-flex items-center px-8 py-4 bg-cream-100 text-warm-olive-800 
+           font-bold rounded-2xl hover:bg-warm-olive-600 hover:text-cream-50 hover:shadow-lg
            transform hover:-translate-y-1 transition-all duration-300;
   }
   
-  .card-elevated {
-    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl 
+  .card-elegant {
+    @apply bg-cream-50 rounded-3xl shadow-lg hover:shadow-xl 
            transform hover:-translate-y-2 transition-all duration-300 
-           border border-gray-100;
+           border border-cream-200;
   }
   
-  .card-vibrant {
-    @apply bg-vibrant-500 text-white rounded-3xl shadow-lg hover:shadow-xl
+  .card-warm {
+    @apply bg-warm-olive-500 text-cream-50 rounded-3xl shadow-lg hover:shadow-xl
            transform hover:-translate-y-2 transition-all duration-300;
   }
   
-  .floating-element {
-    @apply absolute rounded-full opacity-20 pointer-events-none animate-float;
-  }
-  
   .section-hero {
-    @apply relative overflow-hidden min-h-screen flex items-center bg-white;
+    @apply relative overflow-hidden min-h-screen flex items-center bg-cream-50;
   }
   
-  .section-modern {
-    @apply relative py-20 overflow-hidden bg-white;
+  .section-warm {
+    @apply relative py-20 overflow-hidden bg-warm-olive-50;
   }
   
-  .text-vibrant-gradient {
-    @apply text-vibrant-500 font-bold;
+  .text-warm-gradient {
+    @apply text-warm-olive-600 font-serif font-semibold;
   }
   
-  .glass-effect {
-    @apply bg-white/90 backdrop-blur-md border border-gray-100 shadow-lg;
-  }
-  
-  .floating-badge {
-    @apply absolute bg-white px-4 py-2 rounded-2xl text-sm font-bold
-           shadow-lg border border-gray-100 transform hover:scale-105 transition-all duration-300;
+  .banner-top {
+    @apply bg-warm-olive-600 text-cream-100 text-center py-3 text-sm font-medium;
   }
   
   /* Custom scrollbar */
@@ -93,16 +90,16 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #f9fafb;
+    background: #faf8f5;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #dd54f0;
+    background: var(--warm-olive);
     border-radius: 3px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #c639d8;
+    background: var(--warm-brown);
   }
 }
 

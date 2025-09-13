@@ -4,7 +4,6 @@ import ServiceCard from '@/components/ServiceCard'
 import BlogCard from '@/components/BlogCard'
 import TestimonialCard from '@/components/TestimonialCard'
 import CaseStudyCard from '@/components/CaseStudyCard'
-import WhimsicalElements from '@/components/WhimsicalElements'
 import { 
   getFeaturedServices, 
   getFeaturedBlogPosts, 
@@ -21,217 +20,212 @@ export default async function HomePage() {
   ])
 
   return (
-    <div className="flex flex-col bg-white min-h-screen">
-      {/* Hero Section - Increased top padding for more space from nav */}
-      <section className="relative py-16 lg:py-20 xl:py-24 bg-white overflow-hidden min-h-[90vh] flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left Content - Better width control and centering */}
-            <div className="lg:col-span-7 animate-fade-in-up flex flex-col justify-start">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 lg:mb-8 leading-[0.9] tracking-tight max-w-4xl">
-                Build Great
-                <br />
-                <span className="text-vibrant-500">Workplaces</span> in
-                <br />
-                West Michigan.
-              </h1>
-              
-              <p className="text-lg sm:text-xl text-gray-600 mb-10 lg:mb-12 leading-relaxed max-w-2xl font-medium">
-                Expert HR consulting tailored for West Michigan's unique business landscape. From Grand Rapids to Kalamazoo, we help companies thrive.
-              </p>
-              
-              {/* Community badge */}
-              <div className="flex items-center gap-6 mb-12 lg:mb-16">
-                <div className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-2xl">
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 bg-vibrant-400 rounded-full border-2 border-white"></div>
-                    <div className="w-8 h-8 bg-blue-400 rounded-full border-2 border-white"></div>
-                  </div>
-                  <div className="text-xs font-black text-gray-500">75+</div>
-                </div>
-                <div className="text-sm font-semibold text-gray-900">
-                  West Michigan<br />
-                  companies served.
-                </div>
-              </div>
-              
-              {/* Stats row - Better responsive layout */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 mb-16 max-w-2xl">
-                <div>
-                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">15+</div>
-                  <p className="text-sm text-gray-600 leading-tight">Years serving<br />West Michigan businesses</p>
-                </div>
-                <div>
-                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">40%</div>
-                  <p className="text-sm text-gray-600 leading-tight">Average turnover<br />reduction achieved</p>
-                </div>
-                <div>
-                  <div className="text-3xl lg:text-4xl font-black text-vibrant-500 mb-3">100%</div>
-                  <p className="text-sm text-gray-600 leading-tight">Michigan employment<br />law compliant</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right Content - Aligned to top to match text positioning */}
-            <div className="lg:col-span-5 animate-slide-up animation-delay-400 relative flex items-start justify-center pt-0">
-              <div className="relative max-w-lg mx-auto lg:max-w-none w-full flex items-start justify-center">
-                {/* Main hero shape with floating elements - Aligned to top */}
-                <div className="relative flex items-start justify-center pt-0">
-                  {/* Large pink organic shape */}
-                  <div className="w-64 h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-vibrant-500 rounded-full opacity-20 blur-3xl absolute top-8"></div>
-                  <div className="relative bg-white rounded-[3rem] p-6 lg:p-8 shadow-xl border border-gray-100">
-                    
-                    {/* Professional image - Better sizing and centering */}
-                    <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-gradient-to-br from-vibrant-400 to-vibrant-600 rounded-3xl flex items-center justify-center relative overflow-hidden mx-auto">
-                      <img
-                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop&auto=format,compress"
-                        alt="West Michigan HR Consulting Professional"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    
-                    {/* Floating badges - Better responsive positioning */}
-                    <div className="absolute -top-3 -right-3 bg-white p-2 lg:p-3 rounded-xl shadow-lg border border-gray-100">
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-vibrant-500 rounded-full flex items-center justify-center">
-                          <Users className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
-                        </div>
-                        <span className="text-xs font-bold text-gray-900 hidden sm:inline">Local Expert</span>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute -bottom-4 -left-4 bg-white p-2 lg:p-3 rounded-xl shadow-lg border border-gray-100">
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 lg:w-8 lg:h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                          <TrendingUp className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
-                        </div>
-                        <span className="text-xs font-bold text-gray-900 hidden sm:inline">Growth Focused</span>
-                      </div>
-                    </div>
-                  </div>
+    <div className="flex flex-col bg-cream-50 min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 bg-cream-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="animate-fade-in-up">
+              {/* Decorative oval portrait frame */}
+              <div className="relative w-80 h-96 mx-auto lg:mx-0 mb-12 lg:mb-0">
+                {/* Golden decorative border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cream-300 to-cream-500 rounded-full transform rotate-3"></div>
+                <div className="absolute inset-2 bg-cream-50 rounded-full"></div>
+                
+                {/* Portrait image */}
+                <div className="absolute inset-4 rounded-full overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
+                    alt="West Michigan HR Consulting Professional"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
-                {/* Trust badge - Better positioning */}
-                <div className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 bg-white p-3 lg:p-4 rounded-xl shadow-lg border border-gray-100">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
-                    <div>
-                      <div className="text-xs lg:text-sm font-black text-gray-900">Michigan Based</div>
-                      <div className="text-xs text-gray-600 leading-tight hidden sm:block">Deep local market<br />knowledge</div>
-                    </div>
-                  </div>
-                </div>
+                {/* Decorative small circles */}
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-cream-300 rounded-full opacity-60"></div>
+                <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-warm-olive-300 rounded-full opacity-60"></div>
+                <div className="absolute top-1/4 -left-8 w-6 h-6 bg-warm-brown-300 rounded-full opacity-60"></div>
               </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Background decorative elements */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-vibrant-500 rounded-full"></div>
-        <div className="absolute bottom-40 left-40 w-4 h-4 bg-vibrant-400 rounded-full opacity-60"></div>
-        <div className="absolute top-40 right-40 w-3 h-3 bg-blue-400 rounded-full"></div>
-      </section>
-
-      {/* Why Choose Us - Minimal white section */}
-      <section className="py-32 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="w-16 h-16 bg-vibrant-500 rounded-2xl mx-auto mb-8 flex items-center justify-center">
-              <span className="text-2xl">+</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-              Why West Michigan
-              <br />
-              <span className="text-vibrant-500">Trusts</span> Us
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-5xl mx-auto">
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-vibrant-500 transition-all duration-300">
-                <Users className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4">
-                Born & Raised Local
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Lifelong West Michigan residents who understand our region's unique business culture, from lakeshore manufacturing to downtown tech startups.
-              </p>
             </div>
             
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-vibrant-500 transition-all duration-300">
-                <TrendingUp className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4">
-                Proven Impact
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Consistently deliver 40%+ turnover reduction and measurable culture improvements for companies across Kent, Ottawa, and Kalamazoo counties.
-              </p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-vibrant-500 transition-all duration-300">
-                <Shield className="w-10 h-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-black text-gray-900 mb-4">
-                Michigan Law Experts
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Stay ahead of Michigan's evolving employment landscape with expertise in state-specific regulations and regional compliance requirements.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Minimal decorative elements */}
-        <div className="absolute top-32 right-20 w-32 h-32 bg-vibrant-500 rounded-full opacity-5 blur-2xl"></div>
-        <div className="absolute bottom-32 left-20 w-24 h-24 bg-blue-400 rounded-full opacity-10 blur-xl"></div>
-      </section>
-
-      {/* Featured Services */}
-      {services.length > 0 && (
-        <section className="py-32 bg-gray-50 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                HR Solutions for
+            {/* Right Content */}
+            <div className="animate-slide-up animation-delay-400 text-center lg:text-left">
+              <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl text-warm-olive-800 mb-8 leading-tight">
+                Crafting workplaces
                 <br />
-                <span className="text-vibrant-500">Every</span> West Michigan Business
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                From Zeeland startups to Kalamazoo manufacturers, we've got you covered
+                that <em className="text-cream-600">reign supreme.</em>
+              </h1>
+              
+              <p className="text-lg text-warm-olive-700 mb-12 leading-relaxed max-w-xl">
+                Take your West Michigan organization to the next level with expert HR management solutions!
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {services.map((service, index) => (
-                <div key={service.id} className="animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-                  <ServiceCard service={service} />
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-center">
-              <Link href="/services" className="inline-flex items-center px-12 py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-1">
-                Explore All Services
-                <ArrowRight className="w-5 h-5 ml-3" />
+              
+              {/* CTA Button */}
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-warm-olive-600 text-cream-50 font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              >
+                WORK WITH US
               </Link>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+      {/* Client Logos Section */}
+      <section className="py-16 bg-cream-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="font-serif text-lg text-warm-olive-700 mb-8 uppercase tracking-wider">
+              WHERE OUR CLIENTS HAVE BEEN FEATURED
+            </h3>
+          </div>
+          
+          {/* Mock client logos */}
+          <div className="flex flex-wrap items-center justify-center gap-12 lg:gap-16 opacity-60">
+            <div className="font-serif text-2xl text-warm-olive-600 font-bold">LOGO</div>
+            <div className="font-serif text-2xl text-warm-olive-600 font-bold italic">logo</div>
+            <div className="font-serif text-2xl text-warm-olive-600 font-bold">LOGO</div>
+            <div className="font-serif text-2xl text-warm-olive-600 font-bold italic">Logo</div>
+            <div className="font-serif text-2xl text-warm-olive-600 font-bold">LOGO</div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 lg:py-32 bg-warm-brown-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Right side - Portrait */}
+            <div className="order-2 lg:order-1">
+              <div className="relative w-full max-w-md mx-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=1000&fit=crop&auto=format,compress"
+                  alt="HR Consulting Professional"
+                  className="w-full h-auto rounded-3xl shadow-2xl"
+                />
+                
+                {/* Decorative elements */}
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-cream-300 rounded-full opacity-40"></div>
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-warm-olive-300 rounded-full opacity-40"></div>
+              </div>
+            </div>
+            
+            {/* Left side - Content */}
+            <div className="order-1 lg:order-2">
+              <h2 className="font-serif text-4xl lg:text-5xl text-warm-olive-800 mb-8 leading-tight">
+                Hey, I'm Jessica!
+              </h2>
+              
+              <div className="prose prose-lg text-warm-olive-700 leading-relaxed space-y-6">
+                <p>
+                  With over 15 years of experience in West Michigan's dynamic business landscape, I've dedicated my career to helping organizations build exceptional workplaces that attract and retain top talent.
+                </p>
+                
+                <p>
+                  From Grand Rapids startups to Kalamazoo manufacturers, I understand the unique challenges facing Michigan businesses. My approach combines deep local knowledge with proven HR strategies to create sustainable workplace cultures.
+                </p>
+                
+                <p>
+                  Whether you're navigating complex employment law, building your first HR policies, or scaling your team culture, I'm here to help you create a workplace where both your business and your people can thrive.
+                </p>
+                
+                <p>
+                  Let's work together to transform your workplace into something extraordinary - because great businesses deserve great HR support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 lg:py-32 bg-warm-olive-600 text-cream-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl lg:text-5xl mb-8 leading-tight">
+              Services I Offer
+            </h2>
+            <p className="text-lg text-cream-200 max-w-2xl mx-auto leading-relaxed">
+              Every business is unique, which is why I'm dedicated to tailoring my approach to fit your specific needs and stay ahead of the curve.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {/* Service 1 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-cream-300 transition-all duration-300">
+                <div className="w-8 h-8 bg-warm-olive-600 rounded-full flex items-center justify-center">
+                  <span className="text-cream-50 text-xs font-bold">★</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-xl text-cream-100 mb-4 font-semibold">
+                HR STRATEGY
+                <br />
+                DEVELOPMENT
+              </h3>
+              <p className="text-cream-200 text-sm leading-relaxed">
+                Build comprehensive HR frameworks that align with your business goals and support sustainable growth.
+              </p>
+            </div>
+            
+            {/* Service 2 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-cream-300 transition-all duration-300">
+                <div className="w-8 h-8 bg-warm-olive-600 rounded-full flex items-center justify-center">
+                  <span className="text-cream-50 text-xs font-bold">★</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-xl text-cream-100 mb-4 font-semibold">
+                COMPLIANCE &
+                <br />
+                RISK MANAGEMENT
+              </h3>
+              <p className="text-cream-200 text-sm leading-relaxed">
+                Navigate Michigan employment law with confidence while protecting your organization from HR risks.
+              </p>
+            </div>
+            
+            {/* Service 3 */}
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-cream-300 transition-all duration-300">
+                <div className="w-8 h-8 bg-warm-olive-600 rounded-full flex items-center justify-center">
+                  <span className="text-cream-50 text-xs font-bold">★</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-xl text-cream-100 mb-4 font-semibold">
+                TALENT
+                <br />
+                DEVELOPMENT
+              </h3>
+              <p className="text-cream-200 text-sm leading-relaxed">
+                Create programs that attract top talent, develop your team, and build a workplace culture people love.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-16">
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-8 py-4 bg-cream-100 text-warm-olive-800 font-bold rounded-2xl hover:bg-cream-200 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials */}
       {testimonials.length > 0 && (
-        <section className="py-32 bg-white relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                West Michigan
+        <section className="py-20 lg:py-32 bg-cream-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl lg:text-5xl text-warm-olive-800 mb-8 leading-tight">
+                What West Michigan
                 <br />
-                <span className="text-vibrant-500">Success</span> Stories
+                <span className="text-cream-600">Leaders</span> Are Saying
               </h2>
             </div>
             
@@ -246,31 +240,26 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* CTA Section - Clean white */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      {/* CTA Section */}
+      <section className="py-20 lg:py-32 bg-warm-brown-50">
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
-          <h2 className="text-5xl md:text-6xl font-black mb-8 text-gray-900 leading-tight">
-            Ready to Transform
+          <h2 className="font-serif text-4xl lg:text-5xl mb-8 text-warm-olive-800 leading-tight">
+            Ready to Build Something
             <br />
-            Your Workplace?
+            <em className="text-cream-600">Extraordinary?</em>
           </h2>
-          <p className="text-xl mb-12 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Join the growing community of West Michigan businesses creating exceptional workplaces. 
-            Let's start with a free consultation to explore what's possible for your team.
+          <p className="text-xl mb-12 text-warm-olive-700 max-w-2xl mx-auto leading-relaxed">
+            Let's collaborate to create an HR strategy that transforms your workplace culture 
+            and drives sustainable business growth throughout West Michigan.
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center px-12 py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-vibrant-500 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center px-12 py-4 bg-warm-olive-600 text-cream-50 font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
           >
-            Schedule Your Free Consultation
+            Start Your Transformation
             <ArrowRight className="w-5 h-5 ml-3" />
           </Link>
         </div>
-        
-        {/* Minimal background elements */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-vibrant-500 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-blue-400 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-gray-400 rounded-full"></div>
       </section>
     </div>
   )
