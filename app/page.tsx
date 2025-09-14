@@ -48,21 +48,40 @@ export default async function HomePage() {
               </Link>
             </div>
             
-            {/* Right Content - Image */}
+            {/* Right Content - Image with Oval Frame */}
             <div className="order-1 lg:order-2">
               <div className="relative w-full max-w-lg mx-auto">
-                {/* Hero image with responsive scaling */}
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
-                    alt="Social Media Content Creator"
-                    className="w-full h-full object-cover"
-                  />
+                {/* Outer decorative oval border */}
+                <div className="relative">
+                  {/* Golden oval frame border */}
+                  <div 
+                    className="absolute inset-0 rounded-full border-4 border-warm-olive-500 shadow-2xl transform scale-105"
+                    style={{
+                      background: 'linear-gradient(45deg, #d4a762, #b8884a, #956d3e)',
+                      padding: '8px'
+                    }}
+                  ></div>
+                  
+                  {/* Hero image with oval mask */}
+                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
+                      alt="Social Media Content Creator"
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Inner oval gradient overlay for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-full"></div>
+                  </div>
                 </div>
                 
-                {/* Subtle decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/20 rounded-full"></div>
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-white/30 rounded-full"></div>
+                {/* Subtle decorative sparkles/dots around the oval */}
+                <div className="absolute top-8 left-8 w-2 h-2 bg-white/60 rounded-full animate-pulse"></div>
+                <div className="absolute top-16 right-12 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-20 left-6 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-12 right-8 w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                <div className="absolute top-24 right-4 w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-32 left-12 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
               </div>
             </div>
           </div>
