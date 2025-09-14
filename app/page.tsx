@@ -27,45 +27,24 @@ export default async function HomePage() {
       }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content - Text */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-white mb-6 leading-tight">
-                Crafting content
-                <br />
-                that <em className="text-white/90">reigns supreme.</em>
-              </h1>
-              
-              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-xl lg:max-w-none">
-                Take your social media platform to the next level with expert social media management!
-              </p>
-              
-              {/* CTA Button */}
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-warm-olive-600 text-white font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
-              >
-                WORK WITH ME
-              </Link>
-            </div>
-            
-            {/* Right Content - Image with Oval Frame */}
-            <div className="order-1 lg:order-2">
-              <div className="relative w-full max-w-lg mx-auto">
+            {/* Left Content - Image with Oval Frame */}
+            <div className="order-1 lg:order-1">
+              <div className="relative w-full max-w-sm mx-auto">
                 {/* Outer decorative oval border */}
                 <div className="relative">
-                  {/* Golden oval frame border */}
+                  {/* Golden oval frame border - made thinner */}
                   <div 
-                    className="absolute inset-0 rounded-full border-4 border-warm-olive-500 shadow-2xl transform scale-105"
+                    className="absolute inset-0 rounded-full border-2 border-warm-olive-500 shadow-2xl transform scale-105"
                     style={{
                       background: 'linear-gradient(45deg, #d4a762, #b8884a, #956d3e)',
-                      padding: '8px'
+                      padding: '4px'
                     }}
                   ></div>
                   
-                  {/* Hero image with oval mask */}
-                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                  {/* Hero image with oval mask - made smaller */}
+                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-2xl border-2 border-white/20">
                     <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&auto=format,compress"
                       alt="Social Media Content Creator"
                       className="w-full h-full object-cover"
                     />
@@ -83,6 +62,27 @@ export default async function HomePage() {
                 <div className="absolute top-24 right-4 w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
                 <div className="absolute bottom-32 left-12 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
               </div>
+            </div>
+            
+            {/* Right Content - Text */}
+            <div className="order-2 lg:order-2 text-center lg:text-left">
+              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-white mb-6 leading-tight">
+                Crafting content
+                <br />
+                that <em className="text-white/90">reigns supreme.</em>
+              </h1>
+              
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-xl lg:max-w-none">
+                Take your social media platform to the next level with expert social media management!
+              </p>
+              
+              {/* CTA Button */}
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-warm-olive-600 text-white font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              >
+                WORK WITH ME
+              </Link>
             </div>
           </div>
         </div>
