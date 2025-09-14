@@ -26,49 +26,9 @@ export default async function HomePage() {
         background: 'linear-gradient(135deg, #B7C4D5 0%, #DED8D8 100%)'
       }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content - Image with Oval Frame */}
-            <div className="order-2 lg:order-1">
-              <div className="relative w-full max-w-xs mx-auto lg:mx-0">
-                {/* Outer decorative oval border - made thinner */}
-                <div className="relative">
-                  {/* Golden oval frame border - made much thinner */}
-                  <div 
-                    className="absolute inset-0 rounded-full border border-warm-olive-400 shadow-lg transform scale-105"
-                    style={{
-                      background: 'linear-gradient(45deg, #d4a762, #b8884a, #956d3e)',
-                      padding: '2px'
-                    }}
-                  ></div>
-                  
-                  {/* Hero image with oval mask - made smaller */}
-                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-lg border border-white/20">
-                    <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop&auto=format,compress"
-                      alt="Social Media Content Creator"
-                      className="w-full h-full object-cover"
-                    />
-                    
-                    {/* Inner oval gradient overlay for depth */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* Decorative sparkles/dots around the oval - matching reference image style */}
-                <div className="absolute top-6 left-6 w-1.5 h-1.5 bg-white/80 rounded-full animate-pulse"></div>
-                <div className="absolute top-12 right-8 w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute top-20 left-12 w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-16 left-4 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-                <div className="absolute bottom-8 right-6 w-1.5 h-1.5 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute top-28 right-2 w-1 h-1 bg-white/80 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
-                <div className="absolute bottom-24 left-8 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
-                <div className="absolute top-32 left-2 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '3.5s' }}></div>
-                <div className="absolute bottom-12 right-12 w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '4s' }}></div>
-              </div>
-            </div>
-            
-            {/* Right Content - Text */}
-            <div className="order-1 lg:order-2 text-center lg:text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Content - Text */}
+            <div className="order-2 lg:order-1 text-center lg:text-left">
               <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-white mb-6 leading-tight">
                 Crafting content
                 <br />
@@ -86,6 +46,46 @@ export default async function HomePage() {
               >
                 WORK WITH ME
               </Link>
+            </div>
+
+            {/* Right Content - Oval Image - moved closer to text */}
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-start">
+              <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:ml-8">
+                {/* Outer decorative oval border */}
+                <div className="relative">
+                  {/* Golden oval frame border */}
+                  <div 
+                    className="absolute inset-0 rounded-full border-2 border-warm-olive-400 shadow-lg transform scale-105"
+                    style={{
+                      background: 'linear-gradient(45deg, #d4a762, #b8884a, #956d3e)',
+                      padding: '3px'
+                    }}
+                  ></div>
+                  
+                  {/* Hero image with oval mask */}
+                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-lg border-2 border-white/20">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&auto=format,compress"
+                      alt="Social Media Content Creator"
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Inner oval gradient overlay for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* Decorative sparkles/dots around the oval */}
+                <div className="absolute top-6 left-6 w-1.5 h-1.5 bg-white/80 rounded-full animate-pulse"></div>
+                <div className="absolute top-12 right-8 w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute top-20 left-12 w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-16 left-4 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                <div className="absolute bottom-8 right-6 w-1.5 h-1.5 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-28 right-2 w-1 h-1 bg-white/80 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+                <div className="absolute bottom-24 left-8 w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
+                <div className="absolute top-32 left-2 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '3.5s' }}></div>
+                <div className="absolute bottom-12 right-12 w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '4s' }}></div>
+              </div>
             </div>
           </div>
         </div>
