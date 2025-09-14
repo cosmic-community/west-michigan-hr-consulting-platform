@@ -22,42 +22,18 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col bg-cream-50 min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-cream-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div className="animate-fade-in-up">
-              {/* Decorative oval portrait frame */}
-              <div className="relative w-80 h-96 mx-auto lg:mx-0 mb-12 lg:mb-0">
-                {/* Golden decorative border */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cream-300 to-cream-500 rounded-full transform rotate-3"></div>
-                <div className="absolute inset-2 bg-cream-50 rounded-full"></div>
-                
-                {/* Portrait image */}
-                <div className="absolute inset-4 rounded-full overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
-                    alt="West Michigan HR Consulting Professional"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                {/* Decorative small circles */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 bg-cream-300 rounded-full opacity-60"></div>
-                <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-warm-olive-300 rounded-full opacity-60"></div>
-                <div className="absolute top-1/4 -left-8 w-6 h-6 bg-warm-brown-300 rounded-full opacity-60"></div>
-              </div>
-            </div>
-            
-            {/* Right Content */}
-            <div className="animate-slide-up animation-delay-400 text-center lg:text-left">
-              <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl text-warm-olive-800 mb-8 leading-tight">
+      <section className="py-16 lg:py-20 bg-cream-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content - Text */}
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-warm-olive-800 mb-6 leading-tight">
                 Crafting workplaces
                 <br />
                 that <em className="text-cream-600">reign supreme.</em>
               </h1>
               
-              <p className="text-lg text-warm-olive-700 mb-12 leading-relaxed max-w-xl">
+              <p className="text-lg text-warm-olive-700 mb-8 leading-relaxed max-w-xl lg:max-w-none">
                 Take your West Michigan organization to the next level with expert HR management solutions!
               </p>
               
@@ -68,6 +44,24 @@ export default async function HomePage() {
               >
                 WORK WITH US
               </Link>
+            </div>
+            
+            {/* Right Content - Image */}
+            <div className="order-1 lg:order-2">
+              <div className="relative w-full max-w-lg mx-auto">
+                {/* Hero image with responsive scaling */}
+                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
+                    alt="West Michigan HR Consulting Professional"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Subtle decorative elements */}
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-cream-300 rounded-full opacity-40"></div>
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-warm-olive-300 rounded-full opacity-40"></div>
+              </div>
             </div>
           </div>
         </div>
