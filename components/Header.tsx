@@ -29,14 +29,7 @@ export default function Header() {
       <header className="bg-cream-50 relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <div className="text-2xl font-serif font-bold text-warm-olive-800 tracking-tight">
-                West Michigan HR
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
+            {/* Left Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/services" 
@@ -50,6 +43,17 @@ export default function Header() {
               >
                 Portfolio
               </Link>
+            </nav>
+
+            {/* Centered Logo */}
+            <Link href="/" className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none">
+              <div className="text-2xl font-serif font-bold text-warm-olive-800 tracking-tight">
+                West Michigan HR
+              </div>
+            </Link>
+
+            {/* Right Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/services" 
                 className="text-warm-olive-700 hover:text-warm-olive-900 font-medium transition-colors duration-200 text-sm uppercase tracking-wide"
