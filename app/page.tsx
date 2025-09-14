@@ -111,9 +111,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 lg:py-32 bg-warm-brown-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* About Section - "Hey, I'm Jessica" with Two-Colored Background */}
+      <section className="py-20 lg:py-32 relative overflow-hidden" style={{
+        background: 'linear-gradient(to right, #D7C2BF 0%, #D7C2BF 50%, #DFD9B9 50%, #DFD9B9 100%)'
+      }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Right side - Portrait */}
             <div className="order-2 lg:order-1">
