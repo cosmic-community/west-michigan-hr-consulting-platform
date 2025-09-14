@@ -22,27 +22,29 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col bg-cream-50 min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 lg:py-20 bg-cream-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-20 relative overflow-hidden" style={{
+        background: 'linear-gradient(135deg, #B7C4D5 0%, #DED8D8 100%)'
+      }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content - Text */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-warm-olive-800 mb-6 leading-tight">
-                Crafting workplaces
+              <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-white mb-6 leading-tight">
+                Crafting content
                 <br />
-                that <em className="text-cream-600">reign supreme.</em>
+                that <em className="text-white/90">reigns supreme.</em>
               </h1>
               
-              <p className="text-lg text-warm-olive-700 mb-8 leading-relaxed max-w-xl lg:max-w-none">
-                Take your West Michigan organization to the next level with expert HR management solutions!
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-xl lg:max-w-none">
+                Take your social media platform to the next level with expert social media management!
               </p>
               
               {/* CTA Button */}
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-warm-olive-600 text-cream-50 font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+                className="inline-flex items-center px-8 py-4 bg-warm-olive-600 text-white font-bold rounded-2xl hover:bg-warm-olive-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
               >
-                WORK WITH US
+                WORK WITH ME
               </Link>
             </div>
             
@@ -50,17 +52,17 @@ export default async function HomePage() {
             <div className="order-1 lg:order-2">
               <div className="relative w-full max-w-lg mx-auto">
                 {/* Hero image with responsive scaling */}
-                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
                   <img
                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&auto=format,compress"
-                    alt="West Michigan HR Consulting Professional"
+                    alt="Social Media Content Creator"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 
                 {/* Subtle decorative elements */}
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-cream-300 rounded-full opacity-40"></div>
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-warm-olive-300 rounded-full opacity-40"></div>
+                <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white/20 rounded-full"></div>
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-white/30 rounded-full"></div>
               </div>
             </div>
           </div>
