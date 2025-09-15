@@ -48,31 +48,19 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            {/* Right Content - Oval Image - moved closer to text */}
+            {/* Right Content - Hero Image - moved closer to text */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-start">
               <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:ml-8">
-                {/* Outer decorative oval border */}
-                <div className="relative">
-                  {/* Golden oval frame border */}
-                  <div 
-                    className="absolute inset-0 rounded-full border-2 border-warm-olive-400 shadow-lg transform scale-105"
-                    style={{
-                      background: 'linear-gradient(45deg, #d4a762, #b8884a, #956d3e)',
-                      padding: '3px'
-                    }}
-                  ></div>
+                {/* Hero image with oval mask - no border */}
+                <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-lg">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&auto=format,compress"
+                    alt="Social Media Content Creator"
+                    className="w-full h-full object-cover"
+                  />
                   
-                  {/* Hero image with oval mask */}
-                  <div className="relative aspect-[4/5] rounded-full overflow-hidden shadow-lg border-2 border-white/20">
-                    <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop&auto=format,compress"
-                      alt="Social Media Content Creator"
-                      className="w-full h-full object-cover"
-                    />
-                    
-                    {/* Inner oval gradient overlay for depth */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-full"></div>
-                  </div>
+                  {/* Inner oval gradient overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 rounded-full"></div>
                 </div>
                 
                 {/* Decorative sparkles/dots around the oval */}
